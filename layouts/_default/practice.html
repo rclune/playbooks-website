@@ -1,0 +1,75 @@
+{{/* layout for individual practice pages */}}
+{{ define "main" }}
+{{ partial "breadcrumbs.html" . }}
+<article>
+  <section>
+  <!--{{ .Kind }} {{ .Type }}-->
+  </section>
+  <h2>{{ .Title }}</h2>
+  <section class="frontmatter">
+      <div class="frontmatter-section">
+      <div class="label">What</div><div class="values">{{ .Params.what }}</div>
+      </div>
+      <div class="frontmatter-section">
+      <div class="label">Why</div><div class="values">{{ .Params.why }}</div>
+      </div>
+      <div class="frontmatter-section">
+      <div class="label">When</div><div class="values">{{ .Params.when }}</div>
+      </div>
+
+      {{ if .Params.challenges }}
+      <div class="frontmatter-section">
+      <div class="label">Challenges</div>
+      <div class="values">
+      <ul>
+      {{ range $chal := .Params.challenges }}
+        <li>{{ $chal | markdownify }}</li>
+      {{ end }}
+      </ul>
+      </div>
+      </div>
+      {{ end }}
+
+      {{ if .Params.implementations }}
+      <div class="implementations"><b>Implementations:</b>
+      {{/* hasAdv might not longer be needed */}}
+      {{ $hasAdv := where .Params.implementations "isset advantages" true }}
+        <ul class="implementations">
+        {{ range $impl := .Params.implementations }}
+          <div class="implementation">
+            <div class="impl-desc">{{ $impl.desc | markdownify }}</div>
+            {{ if (or $impl.advantages $impl.disadvantages) }}
+            {{ partial "advantages-disadvantages.html" $impl }}
+            {{ end }}
+          </div>
+        {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+
+      {{ if .Params.recommendation }}
+      <div class="recommendation"><b>Recommendation:</b>
+      {{ .Params.recommendation }}
+      </div>
+      {{ end }}
+
+      {{ if .Params.see_also }}
+      <div class="see-also"><b>See also:</b>
+      <ul>
+      {{ range $also := .Params.see_also }}
+        <li>{{ $also | markdownify }}</li>
+      {{ end }}
+      </ul>
+      </div>
+      {{ end }}
+
+      {{ if .Params.note }}
+      <div class="note"><i>Note:</i> {{ .Params.note }}</div>
+      {{ end }}
+  </section>
+  <section class="content">
+    {{ .Content }}
+  </section>
+</article>
+{{ partial "prev_next.html" . }}
+{{ end }}

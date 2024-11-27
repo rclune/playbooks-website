@@ -1,0 +1,22 @@
+
+baseURL: 'https://example.org/'
+languageCode: 'en-us'
+title: 'OMSF Playbooks'
+theme: 'hugo-flex'
+
+menu:
+  main:
+    - name: Developer
+      pageRef: /developer
+      weight: 1
+    - name: Contributions
+      pageRef: /contributions
+      weight: 2
+
+params:
+  css:
+    - css/playbooks.css
+
+taxonomies:
+  theme: themes
+  level: levels

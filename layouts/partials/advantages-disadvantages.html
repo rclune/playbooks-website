@@ -1,0 +1,25 @@
+      {{ if or .advantages .disadvantages }}
+      <div class="advantages-disadvantages">
+      {{ if .advantages }}
+      <div class="advantages">
+        <ul class="list-advantages">
+        {{ range $ad := .advantages }}
+          <li>{{ $ad }}</li>
+        {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+
+      {{ if .disadvantages }}
+      <div class="disadvantages">
+        <ul class="list-disadvantages">
+        {{ range $disad := .disadvantages }}
+          <li>{{ $disad }}</li>
+        {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+      </div>
+      {{ end }}
+
+

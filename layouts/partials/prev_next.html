@@ -1,0 +1,47 @@
+<div class="prev-next">
+  <!-- don't ask me why Hugo gets Next and Previous backwards -->
+  {{ $prev_title := "" }}
+  {{ $prev_link := "" }}
+  {{ with .NextInSection }}
+     {{ $prev_title = .Title }} 
+     {{ $prev_link = .RelPermalink }}
+  {{ else with .Parent }}
+     {{ $prev_title = .Title }} 
+     {{ $prev_link = .RelPermalink }}
+  {{ end }}
+  {{ if $prev_title }}
+  <div class="prev">
+    <a href="{{ $prev_link }}" class="prev-link">
+      <span class="arrow">←</span>
+      <span class="label">Previous: </span>
+      <span class="title">{{ $prev_title }}</span>
+    </a>
+  </div>
+  {{ end }}
+  {{ $next_title := "" }}
+  {{ $next_link := "" }}
+  {{ with .PrevInSection }}
+     {{ $next_title = .Title }} 
+     {{ $next_link = .RelPermalink }}
+  {{ else }}
+     {{ $parent := .Parent }}
+     {{ $sorted_sections := .Parent.Parent.Pages.ByWeight }}
+     {{ range $index, $page := $sorted_sections }}
+        {{ if (eq $page $parent) }}
+           {{ $next_idx := add $index 1 }}
+           {{ $next := index $sorted_sections $next_idx }}
+           {{ $next_title = $next.Title }}
+           {{ $next_link = $next.RelPermalink }}
+        {{ end }}
+     {{ end }}
+  {{ end }}
+  {{ if $next_title }}
+  <div class="next">
+    <a href="{{ $next_link }}" class="next-link">
+      <span class="label">Next: </span>
+      <span class="title">{{ $next_title }}</span>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+  {{ end }}
+</div>

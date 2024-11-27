@@ -1,0 +1,32 @@
+{{/* layout for comparison pages */}}
+{{ define "main" }}
+
+{{ partial "breadcrumbs.html" . }}
+<article>
+  <h2>{{ .Title }}</h2>
+  <section class="content">
+    {{ .Content }}
+  </section>
+  <section class="options">
+  {{ range .Params.options }}
+    <div class="comparison-option">
+      <div class="name">{{ .name }}</div>
+
+      {{ partial "advantages-disadvantages.html" . }}
+
+      {{ if .bestfor }}
+      <div class="best-for">
+        Best for:
+        <ul class="list-best-for">
+        {{ range $bestfor := .bestfor }}
+          <li>{{ $bestfor }}</li>
+        {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+
+    </div>
+  {{ end }}
+  </section>
+</article>
+{{ end }}

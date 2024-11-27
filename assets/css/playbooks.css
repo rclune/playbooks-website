@@ -1,0 +1,140 @@
+:root {
+    --striping-color: #cfece2;
+}
+
+h1 {
+   font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+/* landing page (index.html) */
+
+
+/* breadcrumbs */
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: end;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+    display: inline-block;
+    margin: 0 0.25em;
+    content: "→";
+}
+
+/* Comparison pages */
+.comparison-option {
+    padding: 1em;
+    margin: 1em 0;
+    border: 1px solid #ccc;
+}
+
+.comparison-option:nth-child(odd) {
+    background: var(--striping-color);
+}
+
+.comparison-option .name {
+    font-weight: bold;
+}
+
+.best-for {
+    display: inline;
+}
+
+.list-best-for {
+    display: inline;
+    list-style: none;
+    li {
+        display: inline;
+    }
+    li:after {
+        content: ", ";
+    }
+    li:last-child:after {
+        content: "";
+    }
+}
+
+/* advantages-disadvantages */
+.list-advantages {
+    li::marker { color: green; }
+    list-style-type: "✓ ";
+}
+
+.list-disadvantages {
+    li::marker { color: red; }
+    list-style-type: "✗ ";
+}
+
+.advantages-disadvantages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.advantages {
+    flex: 1;
+    margin-right: 1em;
+}
+
+.disadvantages {
+    flex: 1;
+}
+
+
+/* playbook main pages */
+.section-box {
+    padding: 1em;
+    margin: 1em 0;
+    border: 1px solid #ccc;
+}
+
+.section-box:nth-child(odd) {
+    background: var(--striping-color);
+}
+
+/* practice pages */
+section.frontmatter {
+    border: 1px solid #ccc;
+}
+.frontmatter-section {
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*justify-content: space-between;*/
+    display: grid;
+    grid-template-columns: 5em 1fr;
+    width: 100%;
+}
+
+
+.frontmatter-section .label {
+    font-weight: bold;
+    /*flex: 0 0 10em;*/
+    /*align-items: stretch;*/
+    /*justify-content: flex-start;*/
+    /*flex-wrap: nowrap;*/
+    /*gap: 0.5em;*/
+}
+
+.frontmatter-section .value {
+    flex: 1;
+}
+
+.frontmatter-section .label::after {
+    content: ":";
+}
+
+.implementation {
+    border: 1px solid #ccc;
+}
+
+.implementation:nth-child(odd) div {
+    background: var(--striping-color);
+}
