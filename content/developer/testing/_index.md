@@ -1,3 +1,4 @@
 ---
 title: Testing
+layout: topic
 ---
