@@ -9,6 +9,21 @@
      {{ $prev_title = .Title }} 
      {{ $prev_link = .RelPermalink }}
   {{ end }}
+  {{ if .Pages }}
+     {{ $this_page := . }}
+     {{ with .Parent }}
+        {{ $sorted_sections := .Pages.ByWeight }}
+        {{ range $index, $page := $sorted_sections }}
+           {{ if (eq $page $this_page) }}
+              {{ $prev_sec_idx := sub $index 1 }}
+              {{ $prev_sec := index $sorted_sections $prev_sec_idx }}
+              {{ $prev := index $prev_sec.Pages.ByWeight.Reverse 0 }}
+              {{ $prev_title = $prev.Title }}
+              {{ $prev_link = $prev.RelPermalink }}
+           {{ end }}
+        {{ end }}
+     {{ end }}
+  {{ end }}
   {{ if $prev_title }}
   <div class="prev">
     <a href="{{ $prev_link }}" class="prev-link">
@@ -20,18 +35,23 @@
   {{ end }}
   {{ $next_title := "" }}
   {{ $next_link := "" }}
-  {{ with .PrevInSection }}
+  {{ with index .Pages.ByWeight 0 }}
      {{ $next_title = .Title }} 
      {{ $next_link = .RelPermalink }}
-  {{ else }}
-     {{ $parent := .Parent }}
-     {{ $sorted_sections := .Parent.Parent.Pages.ByWeight }}
-     {{ range $index, $page := $sorted_sections }}
-        {{ if (eq $page $parent) }}
-           {{ $next_idx := add $index 1 }}
-           {{ $next := index $sorted_sections $next_idx }}
-           {{ $next_title = $next.Title }}
-           {{ $next_link = $next.RelPermalink }}
+  {{ else with .PrevInSection }}
+     {{ $next_title = .Title }} 
+     {{ $next_link = .RelPermalink }}
+  {{ else with .Parent }}
+     {{ $parent := . }}
+     {{ with .Parent }}
+        {{ $sorted_sections := .Pages.ByWeight }}
+        {{ range $index, $page := $sorted_sections }}
+           {{ if (eq $page $parent) }}
+              {{ $next_idx := add $index 1 }}
+              {{ $next := index $sorted_sections $next_idx }}
+              {{ $next_title = $next.Title }}
+              {{ $next_link = $next.RelPermalink }}
+           {{ end }}
         {{ end }}
      {{ end }}
   {{ end }}

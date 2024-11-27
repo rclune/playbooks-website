@@ -2,8 +2,10 @@
 layout: practice
 weight: <INTEGER FOR ORDERING, OPTIONAL>
 title: <STRING, REQUIRED>
-what: <STRING, REQUIRED>
-why: <STRING, REQUIRED>
+what: >
+  <STRING, REQUIRED>
+why: >
+  <STRING, REQUIRED>
 when: <STRING, REQUIRED>
 challenges:
   - <OPTIONAL>

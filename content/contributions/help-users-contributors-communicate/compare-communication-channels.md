@@ -1,6 +1,7 @@
 ---
 title: Comparison of different options for communication channels
 layout: comparison
+weight: 100
 
 options:
   - name: GitHub Issues

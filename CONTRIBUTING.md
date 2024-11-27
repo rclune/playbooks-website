@@ -9,7 +9,7 @@ with [YAML](https://yaml.org/) frontmatter. Whether you're fixing a typo,
 adding new content, or suggesting an improvement, we appreciate all
 contributions that help improve this resource for the community.
 
-We use a [GitHub repository](https://github.com/your-repository-link) for
+We use a [GitHub repository](https://github.com/TODO_FILL_THIS_IN) for
 managing all changes, and contributions are handled through **pull requests
 (PRs)**. To contribute, <!-- TODO: something about fork & PR model -->
 
