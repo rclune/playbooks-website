@@ -1,4 +1,5 @@
 ---
+layout: practice
 weight: <INTEGER FOR ORDERING, OPTIONAL>
 title: <STRING, REQUIRED>
 what: <STRING, REQUIRED>
