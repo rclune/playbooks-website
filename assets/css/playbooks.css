@@ -12,6 +12,48 @@ h2 {
 
 /* landing page (index.html) */
 
+.playbook-card-container {
+    display: flex;
+}
+
+.playbook-card {
+    width: 32%;
+    height: 5em;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0.5em;
+    background: #008080;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
+
+.playbook-card-content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playbook-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.playbook-card-container a {
+    text-decoration: none;
+    color: white;
+}
+
+/*.playbook-card-container a:link {*/
+    /*color: white;*/
+/*}*/
+
+/*.playbook-card-container a:visited {*/
+    /*color: white;*/
+/*}*/
+
 
 /* breadcrumbs */
 .breadcrumbs {
@@ -103,28 +145,21 @@ h2 {
 /* practice pages */
 section.frontmatter {
     border: 1px solid #ccc;
+    padding: 1em;
 }
 .frontmatter-section {
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*justify-content: space-between;*/
     display: grid;
     grid-template-columns: 5em 1fr;
     width: 100%;
 }
 
-
 .frontmatter-section .label {
     font-weight: bold;
-    /*flex: 0 0 10em;*/
-    /*align-items: stretch;*/
-    /*justify-content: flex-start;*/
-    /*flex-wrap: nowrap;*/
-    /*gap: 0.5em;*/
 }
 
 .frontmatter-section .value {
     flex: 1;
+    padding-bottom: 1em;
 }
 
 .frontmatter-section .label::after {
