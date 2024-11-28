@@ -29,4 +29,8 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
           role-to-assume: ${{ secrets.AWS_PRODUCTION_ROLE }}
       - name: Deploy
-        run: s3cmd sync --delete-removed public/ s3://${{ secrets.AWS_S3_BUCKET }}
+        run: |
+          s3cmd sync --delete-removed public/ s3://${{ secrets.AWS_S3_BUCKET }}
+          # fix up a problem with the content type of css files
+          aws s3 cp public/css/*.css s3://${{ secrets.AWS_S3_BUCKET }}/css/ --content-type "text/css"
+
