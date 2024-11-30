@@ -19,7 +19,7 @@ implementations:
       - <OPTIONAL LIST>
 recommendation: <OPTIONAL>
 note: <OPTIONAL>
-resources:
+see_also:
   - <LIST OF MARKDOWN STRINGS>
 ---
 <ADDITIONAL CONTENT HERE>
