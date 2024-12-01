@@ -1,0 +1,47 @@
+{{/* layout for the quiz/badge page for a playbook */}}
+{{ define "main" }}
+{{ partial "breadcrumbs.html" . }}
+<article>
+  <input type="text" id="badge-name" value="{{ .Page.Params.badge_name }}"
+         hidden/>
+  <section>
+    <h1>{{ .Page.Title }}</h1>
+    <!--Section Intro:-->
+    {{ .Content }}
+  </section>
+  <section id="badge-quiz-container">
+  {{ with .Parent }}
+    <form id="badge-quiz">
+    {{ range $sec_idx, $sec := .Pages }}
+      {{ $section_id := printf "section-%d" $sec_idx }}
+      {{ if $sec.Pages }}
+        <div class="quiz-section" id="{{ $section_id }}">
+        <h2 class="section-title">{{ .Title }}</h2>
+        {{ range $prac_idx, $prac := $sec.Pages }}
+          {{ if eq $prac.Layout "practice" }}
+            {{ $practice_id := print $section_id "-" $prac_idx }}
+            <input type="checkbox" id="{{ $practice_id }}" class="{{ $section_id }}">
+            <label for="{{ $practice_id }}">{{ $prac.Title }}
+            <span class="tooltip">{{ $prac.Params.what | markdownify }}
+            </span>
+            </label><br/>
+          {{ end }}
+        {{ end }}
+        </div>
+      {{ end }}
+    {{ end }}
+    <input type="submit" value="Make Badge">
+    </form>
+  {{ end }}
+  </section>
+  <section id="badge-container" hidden>
+  {{/* this section is hidden when the quiz is shown */}}
+  <div id="badge">a</div>
+  <input type="reset" form="badge-quiz" value="Retake Quiz"></input>
+  <button id="download-badge">Download Badge</button>
+  </section>
+  {{ $script := resources.Get "js/badge.ts" | js.Build }} 
+  <script src="{{ $script.RelPermalink }}"></script>
+</article>
+{{ end }}
+    
