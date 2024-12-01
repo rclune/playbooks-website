@@ -16,7 +16,3 @@ menu:
 params:
   css:
     - css/playbooks.css
-
-taxonomies:
-  theme: themes
-  level: levels
