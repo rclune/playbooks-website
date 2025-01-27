@@ -37,5 +37,5 @@ jobs:
           s3cmd sync --delete-removed public/ s3://${{ secrets.AWS_S3_BUCKET }}
           # fix up a problem with the content type of css files
           aws s3 cp public/css/*.css s3://${{ secrets.AWS_S3_BUCKET }}/css/ --content-type "text/css"
-        aws s3 cp public/css/compiled/*.css s3://${{ secrets.AWS_S3_BUCKET }}/css/compiled/ --content-type "text/css"
+          aws s3 cp public/css/compiled/*.css s3://${{ secrets.AWS_S3_BUCKET }}/css/compiled/ --content-type "text/css"
 
