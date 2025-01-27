@@ -25,6 +25,8 @@ jobs:
         run: hugo mod get -u
       - name: Build
         run: hugo --minify
+      - name: Debug
+        run: ls -l publis/css
       - name: Configure AWS
         uses: aws-actions/configure-aws-credentials@v4
         with:
