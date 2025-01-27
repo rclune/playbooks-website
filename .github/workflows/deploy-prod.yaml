@@ -26,7 +26,7 @@ jobs:
       - name: Build
         run: hugo --minify
       - name: Debug
-        run: ls -l public/css
+        uses: mxschmitt/action-tmate@v3
       - name: Configure AWS
         uses: aws-actions/configure-aws-credentials@v4
         with:
