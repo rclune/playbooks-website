@@ -21,6 +21,8 @@ jobs:
           python -m pip install s3cmd
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
+      - name: Get modules
+        run: hugo mod get -u
       - name: Build
         run: hugo --minify
       - name: Configure AWS
