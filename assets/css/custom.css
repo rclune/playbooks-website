@@ -1,5 +1,5 @@
 :root {
-    --striping-color: #cfece2;
+    --striping-color: #dfe6ec;
 }
 
 h1 {
@@ -11,48 +11,112 @@ h2 {
 }
 
 /* landing page (index.html) */
+.homepage-content {
+    margin: 0% 5%;
+}
 
-.playbook-card-container {
+/* -- landing page: hero -- */
+.hero {
     display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 4em;
+    margin-left: 2em;
+    margin-bottom: 3em;
+}
+
+.hero h1 {
+    font-size: xxx-large;
+    font-weight: bold;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-description {
+    width: 60%;  /* this is unfortunately a magic number; works to my eye */
+    padding: 1em;
+    margin-right: 2em;
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .hero h1 {
+        font-size: xx-large;
+        text-align: center;
+    }
+
+    .hero-description {
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 75%;
+        height: auto;
+    }
+}
+
+/* -- landing page: playbook cards -- */
+.playbook-cards {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1em;
 }
 
 .playbook-card {
-    width: 32%;
-    height: 5em;
+    display: inline-flex;
+    gap: 1.5em;
+    /*flex-wrap: wrap;*/
+    /*flex-direction: row;*/
+    /*align-items: start;*/
+
+    width: 45%; /* 2 cards per row */
+
+    /* style the border and shadow */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin: 0.5em;
-    background: #008080;
-    color: white;
-    font-size: 2em;
-    text-align: center;
+
+    /* give some space */
+    /*margin: 1.5em;*/
+}
+
+.playbook-card-container {
+    display: inline-flex;
+    margin: 1em;
+}
+
+.playbook-card-image {
+    width: 15%;
+    margin-right: 1em;
 }
 
 .playbook-card-content {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 80%;
+}
+
+.playbook-card-content h2 {
+    display: inline-block;
 }
 
 .playbook-card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.playbook-card-container a {
-    text-decoration: none;
-    color: white;
+@media screen and (max-width: 768px) {
+    .playbook-card {
+        width: 100%; /* 1 card per row */
+    }
 }
-
-/*.playbook-card-container a:link {*/
-    /*color: white;*/
-/*}*/
-
-/*.playbook-card-container a:visited {*/
-    /*color: white;*/
-/*}*/
 
 
 /* breadcrumbs */
@@ -74,7 +138,9 @@ h2 {
 /* Comparison pages */
 .comparison-option {
     padding: 1em;
-    margin: 1em 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
     border: 1px solid #ccc;
 }
 
@@ -119,11 +185,13 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 1em;
 }
 
 .advantages {
     flex: 1;
     margin-right: 1em;
+    margin-left: 1em;
 }
 
 .disadvantages {
@@ -146,10 +214,11 @@ h2 {
 section.frontmatter {
     border: 1px solid #ccc;
     padding: 1em;
+    margin: 1em;
 }
 .frontmatter-section {
     display: grid;
-    grid-template-columns: 5em 1fr;
+    grid-template-columns: 6em 1fr;
     width: 100%;
 }
 
@@ -168,6 +237,7 @@ section.frontmatter {
 
 .implementation {
     border: 1px solid #ccc;
+    margin-left: 1em;
 }
 
 .implementation:nth-child(odd) div {
@@ -190,4 +260,12 @@ label .tooltip {
 
 label:hover .tooltip {
     display: block;
+}
+
+div .quiz-section {
+    margin: 1em;
+}
+
+.quiz-section input[type="checkbox"] {
+    margin-left: 1em;
 }

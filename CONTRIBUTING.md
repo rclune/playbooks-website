@@ -42,8 +42,17 @@ To create a new practice, make a copy of the `templates/practice.md` template an
 
 To create
 
+## Adding a new playbook
+
+To add a new playbook, create a new directory in the `content` directory with
+the contents of that playbook. To add the playbook to the navigation and main
+page, add an entry under `menu.main` in the `hugo.yaml` configuration file.
+Ensure that you have `params.type` set to `playbook`.
+
+
 ## Contributing to site development
 
 If your interest is less about content and more about contributing to the
 presentation of that content, please see the guide in
-[DEVELOPERS.md](./DEVELOPERS.md). 
+[DEVELOPERS.md](./DEVELOPERS.md).
+

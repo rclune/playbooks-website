@@ -1,5 +1,5 @@
 ---
 weight: 4
 Title: Files to include in your repository
-layout: topic
+layout: docs/single
 ---

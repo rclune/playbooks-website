@@ -1,6 +1,8 @@
 {{/* layout for the quiz/badge page for a playbook */}}
 {{ define "main" }}
-{{ partial "breadcrumbs.html" . }}
+  <div class='hx-mx-auto hx-flex {{ partial "utils/page-width" . }}'>
+    {{ partial "sidebar.html" (dict "context" .) }}
+    {{ partial "toc.html" . }}
 <article>
   <input type="text" id="badge-name" value="{{ .Page.Params.badge_name }}"
          hidden/>
@@ -42,6 +44,10 @@
   </section>
   {{ $script := resources.Get "js/badge.ts" | js.Build }} 
   <script src="{{ $script.RelPermalink }}"></script>
+        {{ partial "components/last-updated.html" . }}
+        {{ partial "components/pager.html" . }}
+        {{ partial "components/comments.html" . }}
 </article>
+</div>
 {{ end }}
     

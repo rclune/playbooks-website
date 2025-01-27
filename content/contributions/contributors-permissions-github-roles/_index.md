@@ -1,7 +1,7 @@
 ---
 weight: 5
 Title: Contributors and permissions (GitHub roles)
-layout: topic
+layout: docs/single
 ---
 Long term contributors may be given roles that allow more direct access to make
 changes to project repositories. Tools like GitHub provide

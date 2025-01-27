@@ -1,6 +1,6 @@
 {{/* layout for playbook section, e.g., developers/index.html */}}
 {{ define "main" }}
-{{ partial "breadcrumbs.html" . }}
+{{/* partial "breadcrumbs.html" . */}}
 <article>
   <section>
     <h1>{{ .Page.Title }}</h1>
@@ -41,6 +41,9 @@
       </div>
       {{ end }}
   </section>
+        {{ partial "components/last-updated.html" . }}
+        {{ partial "components/pager.html" . }}
+        {{ partial "components/comments.html" . }}
 </article>
-{{ partial "prev_next.html" . }}
+{{/* partial "prev_next.html" . */}}
 {{ end }}

@@ -1,2 +1,6 @@
 public/
 .hugo_build.lock
+
+# pixi environments
+.pixi
+*.egg-info

@@ -1,6 +1,8 @@
 {{/* layout for topic section: playbook/topic/index.html */}}
 {{ define "main" }}
-{{ partial "breadcrumbs.html" . }}
+  <div class='hx-mx-auto hx-flex {{ partial "utils/page-width" . }}'>
+    {{ partial "sidebar.html" (dict "context" .) }}
+    {{ partial "toc.html" . }}
 <article>
   <section>
     <h1>{{ .Page.Title }}</h1>
@@ -25,6 +27,10 @@
         </div>
       {{ end }}
   </section>
+        {{ partial "components/last-updated.html" . }}
+        {{ partial "components/pager.html" . }}
+        {{ partial "components/comments.html" . }}
 </article>
-{{ partial "prev_next.html" . }}
+</div>
+{{/* partial "prev_next.html" . */}}
 {{ end }}

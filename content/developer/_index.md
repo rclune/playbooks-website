@@ -1,5 +1,6 @@
 ---
 title: Developer Playbook
 weight: 2
-layout: playbook
+layout: docs/single
 ---
+

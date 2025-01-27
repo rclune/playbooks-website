@@ -1,33 +1,35 @@
 {{/* layout for individual practice pages */}}
 {{ define "main" }}
-{{ partial "breadcrumbs.html" . }}
-<article>
-  <section>
-  <!--{{ .Kind }} {{ .Type }}-->
-  </section>
-  <h2>{{ .Title }}</h2>
-  <section class="frontmatter">
-      <div class="frontmatter-section">
-      <div class="label">What</div><div class="values">{{ .Params.what }}</div>
-      </div>
-      <div class="frontmatter-section">
-      <div class="label">Why</div><div class="values">{{ .Params.why }}</div>
-      </div>
-      <div class="frontmatter-section">
-      <div class="label">When</div><div class="values">{{ .Params.when }}</div>
-      </div>
+  <div class='hx-mx-auto hx-flex {{ partial "utils/page-width" . }}'>
+    {{ partial "sidebar.html" (dict "context" .) }}
+    {{ partial "toc.html" . }}
+    <article>
+      <section>
+      <!--{{ .Kind }} {{ .Type }}-->
+      </section>
+      <h2>{{ .Title }}</h2>
+      <section class="frontmatter">
+        <div class="frontmatter-section">
+          <div class="label">What</div><div class="values">{{ .Params.what }}</div>
+        </div>
+        <div class="frontmatter-section">
+          <div class="label">Why</div><div class="values">{{ .Params.why }}</div>
+        </div>
+        <div class="frontmatter-section">
+          <div class="label">When</div><div class="values">{{ .Params.when }}</div>
+        </div>
 
-      {{ if .Params.challenges }}
-      <div class="frontmatter-section">
-      <div class="label">Challenges</div>
-      <div class="values">
-      <ul>
-      {{ range $chal := .Params.challenges }}
-        <li>{{ $chal | markdownify }}</li>
-      {{ end }}
-      </ul>
-      </div>
-      </div>
+        {{ if .Params.challenges }}
+        <div class="frontmatter-section">
+        <div class="label">Challenges</div>
+        <div class="values">
+        <ul>
+          {{ range $chal := .Params.challenges }}
+          <li>{{ $chal | markdownify }}</li>
+          {{ end }}
+        </ul>
+        </div>
+        </div>
       {{ end }}
 
       {{ if .Params.implementations }}
@@ -70,6 +72,10 @@
   <section class="content">
     {{ .Content }}
   </section>
+        {{ partial "components/last-updated.html" . }}
+        {{ partial "components/pager.html" . }}
+        {{ partial "components/comments.html" . }}
 </article>
-{{ partial "prev_next.html" . }}
+</div>
+{{/* partial "prev_next.html" . */}}
 {{ end }}

@@ -1,7 +1,7 @@
 ---
 weight: 2
 Title: Document development of common module types
-layout: topic
+layout: docs/single
 ---
 
 Many projects include modular structures where external contributors might

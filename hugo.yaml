@@ -2,17 +2,56 @@
 baseURL: 'https://example.org/'
 languageCode: 'en-us'
 title: 'OMSF Playbooks'
-theme: 'hugo-flex'
+
+module:
+  imports:
+    - path: "github.com/imfing/hextra"
+      disable: false
 
 menu:
   main:
     - name: Developer
       pageRef: /developer
       weight: 1
+      params:
+        type: playbook
+        teaser: >
+          See our recommendations for best practices when writing software.
     - name: Contributions
       pageRef: /contributions
       weight: 2
+      params:
+        type: playbook
+        teaser: >
+          Learn about how we try to encourage external contributions to our
+          open-source projects.
+
+    - name: Benchmarking
+      pageRef: /benchmarking
+      weight: 3
+      params:
+        type: playbook
+        teaser: >
+          Discover our recommendations for developing benchmarks.
+
+    #- name: Projects
+      #pageRef: /projects
+      #weight: 3
+      #params:
+        #type: playbook
+        #teaser: >
+          #Discover our recommendations for project management.
+          
+    - name: Search
+      weight: 100
+      params:
+        type: search
 
 params:
-  css:
-    - css/playbooks.css
+  search:
+    enable: true
+    type: flexsearch
+
+    flexsearch:
+      index: content
+

@@ -1,4 +1,4 @@
 ---
 title: Continuous Integration
-layout: topic
+layout: docs/single
 ---
