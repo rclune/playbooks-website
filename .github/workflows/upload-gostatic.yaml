@@ -1,0 +1,53 @@
+name: Upload to GoStatic
+
+on:
+  workflow_run:
+    workflows: ["Build from push"]
+    types:
+      - completed
+    branches:
+      - main
+
+jobs:
+  deploy-from-artifact:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          run-id: ${{ github.event.workflow_run.id || github.run_id }}
+          name: "site-build"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get metadata
+        uses: dwhswenson/static-site-workflow/actions/get-metadata@main
+        with:
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract artifact
+        run: |
+          tar -ff site.tgz
+
+      - name: Upload to GoStatic
+        id: gostatic
+        uses: DigitalSVN/GoStatic@v1.0
+        with:
+          api-token: ${{ secrets.GOSTATIC_API_TOKEN }}
+          source-dir: _site
+
+      - name: Comment on PR
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: gostatic
+          number: ${{ env.PR_NUM }}
+          message: |
+            This PR has been staged at ${{ steps.gostatic.outputs.url }}.
+            
+            Updated for commit ${{ env.PR_HEADSHA }}.
+
+
