@@ -2,7 +2,7 @@ name: Upload to GoStatic
 
 on:
   workflow_run:
-    workflows: ["Build from push"]
+    workflows: ["Build from pull"]
     types:
       - completed
     branches:
