@@ -29,7 +29,7 @@ jobs:
 
       - name: Extract artifact
         run: |
-          tar -ff site.tgz
+          tar -xf site.tgz
 
       - name: Upload to GoStatic
         id: gostatic
