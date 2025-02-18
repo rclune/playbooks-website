@@ -5,7 +5,8 @@
 <div class="hero">
 
 <div class="hero-image">
-<a href="https://omsf.io"><img src="/images/omsf-light.G6AaSHws_1HjPSY.webp"
+{{ $omsflogo := absLangURL "images/omsf-light.G6AaSHws_1HjPSY.webp" }}
+<a href="https://omsf.io"><img src="{{ $omsflogo }}"
 alt="Open Molecular Science Foundation"/></a>
 </div>
 
@@ -29,16 +30,18 @@ us!</p>
     {{ $link := .URL }}
     {{ with .PageRef }}
       {{ if hasPrefix . "/" }}
-        {{ $link = relLangURL (strings.TrimPrefix "/" .) }}
+        {{ $link = absLangURL (strings.TrimPrefix "/" .) }}
       {{ end }}
     {{ end }}
     {{ $label := replaceRE ` ` '-' .Name }}
     {{ $label = lower $label }}
+    {{ $image := printf "images/%s.png" $label }}
+    {{ $image = absURL $image }}
     <div class="playbook-card">
       <a href="{{ $link }}">
         <div class="playbook-card-container">
         <div class="playbook-card-image">
-          <img src="/images/{{ $label }}.png" alt="{{ .Title }}"/>
+          <img src="{{ $image }}" alt="{{ .Title }}"/>
         </div>
         <div class="playbook-card-content">
           <h2>{{ .Title }}</h2>
