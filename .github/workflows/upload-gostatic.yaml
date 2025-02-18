@@ -5,8 +5,6 @@ on:
     workflows: ["Build from PR"]
     types:
       - completed
-    branches:
-      - main
 
 jobs:
   deploy-from-artifact:
