@@ -1,49 +1,17 @@
 {{/* layout for playbook section, e.g., developers/index.html */}}
 {{ define "main" }}
-{{/* partial "breadcrumbs.html" . */}}
+  <div class='hx-mx-auto hx-flex {{ partial "utils/page-width" . }}'>
+    {{ partial "sidebar.html" (dict "context" .) }}
+    {{ partial "toc.html" . }}
 <article>
   <section>
     <h1>{{ .Page.Title }}</h1>
     <!--Section Intro:-->
     {{ .Content }}
   </section>
-  <section>
-    {{/* mapping of all themes to list of objects in that theme */}}
-    {{/* loop over theme entries by */}}
-      {{ range .Pages }}
-      <div class="section-box">
-      {{/* recommended fix for the warning: */}}
-      {{/* ".Path when the page is backed by a file is deprecated." */}}
-      {{ $path := "" }}
-      {{ with .File }}
-        {{ $path = .Path }}
-      {{ else }}
-        {{ $path = .Path }}
-      {{ end }}
-      <a href="{{ relref .Page $path }}"><h2>{{ .Page.Title }}</h2></a>
-      <div>{{ .Page.Content }}</div>
-        {{ range .Pages }}
-        <div class="practice-box">
-
-        {{/* recommended fix for the warning: */}}
-        {{/* ".Path when the page is backed by a file is deprecated." */}}
-        {{ $path := "" }}
-        {{ with .File }}
-          {{ $path = .Path }}
-        {{ else }}
-          {{ $path = .Path }}
-        {{ end }}
-
-        <a href="{{ relref .Page $path }}"><h3>{{ .Page.Title }}</h3></a>
-        </div>
-        {{ end }}
-
-      </div>
-      {{ end }}
-  </section>
         {{ partial "components/last-updated.html" . }}
-        {{ partial "components/pager.html" . }}
+        {{ partial "prev_next.html" . }}
         {{ partial "components/comments.html" . }}
 </article>
-{{/* partial "prev_next.html" . */}}
+</div>
 {{ end }}
