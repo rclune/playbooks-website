@@ -1,35 +1,25 @@
 name: Upload to GoStatic
 
 on:
-  workflow_run:
-    workflows: ["Build from PR"]
-    types:
-      - completed
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  deploy-from-artifact:
+  build-and-deploy:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
       contents: read
     steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v4
+      - uses: actions/checkout@v4
         with:
-          run-id: ${{ github.event.workflow_run.id || github.run_id }}
-          name: "site-build"
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          submodules: 'recursive'
 
-      - name: Get metadata
-        uses: dwhswenson/static-site-workflow/actions/get-metadata@main
+      - uses: ./.github/actions/build-hugo-site
         with:
-          run-id: ${{ github.event.workflow_run.id }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Extract artifact
-        run: |
-          tar -xf site.tgz
+          base-url: ""
 
       - name: Upload to GoStatic
         id: gostatic
@@ -42,10 +32,10 @@ jobs:
         uses: marocchino/sticky-pull-request-comment@v2
         with:
           header: gostatic
-          number: ${{ env.PR_NUM }}
+          number: ${{ github.event.pull_request.number }}
           message: |
             This PR has been staged at ${{ steps.gostatic.outputs.url }}.
             
-            Updated for commit ${{ env.PR_HEADSHA }}.
+            Updated for commit ${{ github.event.pull_request.head.sha }}.
 
 
