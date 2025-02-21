@@ -3,26 +3,24 @@
   {{ $prev := "" }}
   {{ with .NextInSection }}
      {{ $prev = . }}
-  {{ else with .Parent }}
-     {{/* if we aren't this page doesn't have a parent, then it is playbooks
-     main; skip */}}
-     {{ if .Parent }}
-       {{ $prev = . }}
-     {{ end }}
   {{ else }}
-     {{ if .Pages }}
      {{ $this_page := . }}
      {{ with .Parent }}
-        {{ $sorted_sections := .Pages.ByWeight }}
-        {{ range $index, $page := $sorted_sections }}
-           {{ if (eq $page $this_page) }}
-              {{ $prev_sec_idx := sub $index 1 }}
-              {{ $prev_sec := index $sorted_sections $prev_sec_idx }}
-              {{ $prev = index $prev_sec.Pages.ByWeight.Reverse 0 }}
+        {{ if .Parent }}
+           {{ $sorted_sections := .Pages.ByWeight }}
+           {{ if eq ($this_page) (index $sorted_sections 0) }}
+              {{ $prev = . }}
+           {{ else }}
+              {{ range $index, $page := $sorted_sections }}
+                 {{ if (eq $page $this_page) }}
+                    {{ $prev_sec_idx := sub $index 1 }}
+                    {{ $prev_sec := index $sorted_sections $prev_sec_idx }}
+                    {{ $prev = index $prev_sec.Pages.ByWeight.Reverse 0 }}
+                 {{ end }}
+              {{ end }}
            {{ end }}
         {{ end }}
      {{ end }}
-  {{ end }}
   {{ end }}
 
   {{ $next := "" }}
