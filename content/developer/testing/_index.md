@@ -1,4 +1,4 @@
 ---
 title: Testing
-layout: docs/single
+layout: topic
 ---

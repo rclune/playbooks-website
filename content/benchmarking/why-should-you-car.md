@@ -1,5 +1,5 @@
 ---
-type: benchmarking
+layout: section
 title: Why should you care?
 weight: 2
 sidebar:
