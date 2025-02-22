@@ -1,5 +1,5 @@
 ---
-type: benchmarking
+layout: section
 title: What is a Benchmark?
 weight: 1
 sidebar:

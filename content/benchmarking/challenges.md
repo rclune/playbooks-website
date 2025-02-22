@@ -1,5 +1,5 @@
 ---
-type: benchmarking
+layout: section
 title: Challenges
 weight: 3
 ---

@@ -1,0 +1,17 @@
+{{/* layout for individual section pages */}}
+{{ define "main" }}
+  <div class='hx-mx-auto hx-flex {{ partial "utils/page-width" . }}'>
+    {{ partial "sidebar.html" (dict "context" .) }}
+    {{ partial "toc.html" . }}
+    <article>
+      <h1>{{ .Title }}</h1>
+      <section class="content">
+        {{ .Content }}
+      </section>
+        {{ partial "components/last-updated.html" . }}
+        {{ partial "prev_next.html" . }}
+        {{ partial "components/comments.html" . }}
+</article>
+</div>
+{{/* partial "prev_next.html" . */}}
+{{ end }}
