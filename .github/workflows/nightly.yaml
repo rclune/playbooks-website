@@ -7,9 +7,15 @@ on:
 
 jobs:
   build:
+    strategy:
+      matrix:
+        hugo-version:
+          - '0.141.0'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           submodules: 'recursive'
       - uses: ./.github/actions/build-hugo-site
+        with:
+          hugo-version: ${{ matrix.hugo-version }}
