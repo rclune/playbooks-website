@@ -34,7 +34,7 @@ jobs:
         with:
           run-id: ${{ github.event.workflow_run.id }}
           name: "site-build"
-          github-token: ${{ inputs.github-token }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Unpack artifact
         run: |
