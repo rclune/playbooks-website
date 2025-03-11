@@ -1,23 +1,61 @@
-name: Build and upload to Cloudflare Pages
+name: Upload to staging
 
 on:
-  push:
+  workflow_run:
+    workflows: ["Build from PR"]
+    types:
+      - completed
 
 jobs:
-  build-and-deploy:
+  stage-from-artifact:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          submodules: 'recursive'
+    permissions:
+      id-token: write
+      contents: read
+      statuses: write
 
-      - uses: ./.github/actions/build-hugo-site
+    steps:
+      - name: Get metadata
+        uses: dwhswenson/static-site-workflow/actions/get-metadata@main
         with:
-          base-url: ""
+          run-id: ${{ github.event.workflow_run.id }}
+          name: "metadata"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+        
+      - uses: myrotvorets/set-commit-status-action@v2.0.1
+        with:
+          status: pending
+          sha: ${{ env.PR_HEADSHA }}
+          context: 'Upload to Cloudflare'
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          run-id: ${{ github.event.workflow_run.id }}
+          name: "site-build"
+          github-token: ${{ inputs.github-token }}
+
+      - name: Unpack artifact
+        run: |
+          tar -xzf site.tgz
+          rm site.tgz
 
       - name: Upload to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy _site --project-name omsf-playbooks
+          command: pages deploy _site --project-name omsf-playbooks --branch pr${{ env.PR_NUMBER }}
+
+      - uses: myrotvorets/set-commit-status-action@v2.0.1
+        if: ${{ always() }}
+        env:
+          DEPLOY_SUCCESS: Successfully staged preview.
+          DEPLOY_FAILURE: Failed to stage preview.
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          status: ${{ job.status == 'success' && 'success' || 'failure' }}
+          sha: ${{ env.PR_HEADSHA }}
+          context: 'Upload to staging'
+          description: ${{ job.status == 'success' && env.DEPLOY_SUCCESS || env.DEPLOY_FAILURE }}
