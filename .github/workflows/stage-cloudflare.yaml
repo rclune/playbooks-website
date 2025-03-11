@@ -10,7 +10,6 @@ jobs:
   stage-from-artifact:
     runs-on: ubuntu-latest
     permissions:
-      id-token: write
       contents: read
       statuses: write
 
