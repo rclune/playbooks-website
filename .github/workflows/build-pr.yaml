@@ -14,7 +14,7 @@ jobs:
           submodules: 'recursive'
       - uses: ./.github/actions/build-hugo-site
         with:
-          base-url: ${{ vars.STAGING_WEBSITE }}/${{ github.event.pull_request.number }}
+          base-url: ""
       - uses: dwhswenson/static-site-workflow/actions/store-artifacts@main
         with:
           site-dir: "_site"
