@@ -17,7 +17,7 @@ jobs:
           BRANCH_NAME="pr${PR_NUMBER}"
           echo "Deleting all deployments for branch: $BRANCH_NAME"
 
-          DEPLOYMENTS=$(curl -s -X GET "https://api.cloudflare.com/client/v4/accounts/${{ secrets.CLOUDFLARE_ACCOUNT_ID }}/pages/projects/YOUR_PROJECT_NAME/deployments" \
+          DEPLOYMENTS=$(curl -s -X GET "https://api.cloudflare.com/client/v4/accounts/${{ secrets.CLOUDFLARE_ACCOUNT_ID }}/pages/projects/${{ vars.CLOUDFARE_PROJECT_NAME }}/deployments" \
             -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
             -H "Content-Type: application/json")
 
@@ -31,7 +31,7 @@ jobs:
             
             for ID in $DEPLOYMENT_IDS; do
               echo "Deleting Deployment ID: $ID"
-              curl -X DELETE "https://api.cloudflare.com/client/v4/accounts/${{ secrets.CLOUDFLARE_ACCOUNT_ID }}/pages/projects/YOUR_PROJECT_NAME/deployments/$ID" \
+              curl -X DELETE "https://api.cloudflare.com/client/v4/accounts/${{ secrets.CLOUDFLARE_ACCOUNT_ID }}/pages/projects/$${{ vars.CLOUDFARE_PROJECT_NAME }}/deployments/$ID" \
                 -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
                 -H "Content-Type: application/json"
             done
