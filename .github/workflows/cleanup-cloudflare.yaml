@@ -1,0 +1,37 @@
+name: Cleanup staging
+description: Cleanup staging environment; this occurs on PR merge or close
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  cleanup-staging:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get PR Number
+        run: echo "PR_NUMBER=${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+
+      - name: Delete Cloudflare Preview Deployment
+        run: |
+          BRANCH_NAME="pr${PR_NUMBER}"
+          echo "Deleting preview for branch: $BRANCH_NAME"
+
+          PROJECT_ID=$(curl -s -X GET "https://api.cloudflare.com/client/v4/accounts/${{ secrets.CLOUDFLARE_ACCOUNT_ID }}/pages/projects/${{ vars.CLOUDFLARE_PROJECT_NAME }}" \
+            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+            -H "Content-Type: application/json" | jq -r '.result.id')
+
+          echo "Project ID: $PROJECT_ID"
+
+          DEPLOYMENT_ID=$(curl -s -X GET "https://api.cloudflare.com/client/v4/accounts/${{ secrets.CLOUDFLARE_ACCOUNT_ID }}/pages/projects/${{ vars.CLOUDFLARE_PROJECT_NAME }}/deployments" \
+            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+            -H "Content-Type: application/json" | jq -r --arg branch "$BRANCH_NAME" '.result[] | select(.deployment_trigger.metadata.branch == $branch) | .id')
+
+          if [ -z "$DEPLOYMENT_ID" ]; then
+            echo "No deployment found for branch: $BRANCH_NAME"
+          else
+            echo "Deleting Deployment ID: $DEPLOYMENT_ID"
+            curl -X DELETE "https://api.cloudflare.com/client/v4/accounts/${{ secrets.CLOUDFLARE_ACCOUNT_ID }}/pages/projects/${{ vars.CLOUDFLARE_PROJECT_NAME }}/deployments/$DEPLOYMENT_ID" \
+              -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+              -H "Content-Type: application/json"
+          fi
