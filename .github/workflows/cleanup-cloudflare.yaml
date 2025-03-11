@@ -21,18 +21,30 @@ jobs:
             -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
             -H "Content-Type: application/json")
 
-          DEPLOYMENT_IDS=$(echo "$DEPLOYMENTS" | jq -r --arg branch "$BRANCH_NAME" '.result[] | select(.deployment_trigger.metadata.branch == $branch) | .id')
+          echo "List of deployments returned from Cloudflare:"
+          echo "$DEPLOYMENTS"
 
+          IS_SUCCESS=$(echo "$DEPLOYMENTS" | jq -r '.success')
+          if [ "$IS_SUCCESS" != "true" ]; then
+            echo "Cloudflare API call was not successful. Response:"
+            echo "$DEPLOYMENTS"
+            exit 1
+          fi
+
+          DEPLOYMENT_IDS=$(echo "$DEPLOYMENTS" | jq -r --arg branch "$BRANCH_NAME" '.result[]? | select(.deployment_trigger.metadata.branch == $branch) | .id')
           if [ -z "$DEPLOYMENT_IDS" ]; then
             echo "No deployments found for branch: $BRANCH_NAME"
-          else
-            echo "Deleting the following deployments:"
-            echo "$DEPLOYMENT_IDS"
-            
-            for ID in $DEPLOYMENT_IDS; do
-              echo "Deleting Deployment ID: $ID"
-              curl -X DELETE "https://api.cloudflare.com/client/v4/accounts/${{ secrets.CLOUDFLARE_ACCOUNT_ID }}/pages/projects/$${{ vars.CLOUDFARE_PROJECT_NAME }}/deployments/$ID" \
-                -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
-                -H "Content-Type: application/json"
-            done
+            exit 0
           fi
+
+          echo "Deleting the following deployments:"
+          echo "$DEPLOYMENT_IDS"
+
+          for ID in $DEPLOYMENT_IDS; do
+            echo "Deleting Deployment ID: $ID"
+            curl -s -X DELETE \
+              "https://api.cloudflare.com/client/v4/accounts/${{ secrets.CLOUDFLARE_ACCOUNT_ID }}/pages/projects/${{ vars.CLOUDFLARE_PROJECT_NAME }}/deployments/$ID" \
+              -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+              -H "Content-Type: application/json"
+          done
+
