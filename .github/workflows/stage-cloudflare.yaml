@@ -13,6 +13,10 @@ jobs:
       contents: read
       statuses: write
 
+    outputs:
+      deployment_url: ${{ steps.deploy.outputs.deployment-url }}
+      pr_number: ${{ env.PR_NUM }}
+
     steps:
       # TODO: get metadata from the workflow_run
       - name: Get metadata
@@ -21,7 +25,7 @@ jobs:
           run-id: ${{ github.event.workflow_run.id }}
           name: "metadata"
           github-token: ${{ secrets.GITHUB_TOKEN }}
-        
+
       - uses: myrotvorets/set-commit-status-action@v2.0.1
         with:
           status: pending
@@ -47,7 +51,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy _site --project-name omsf-playbooks --branch pr${{ env.PR_NUM }}
+          command: pages deploy _site --project-name ${{ vars.CLOUDFLARE_PROJECT_NAME }} --branch pr${{ env.PR_NUM }}
 
       - uses: myrotvorets/set-commit-status-action@v2.0.1
         if: ${{ always() }}
@@ -61,11 +65,17 @@ jobs:
           context: 'Upload to staging'
           description: ${{ job.status == 'success' && env.DEPLOY_SUCCESS || env.DEPLOY_FAILURE }}
 
+  comment-on-pr:
+    runs-on: ubuntu-latest
+    needs: stage-from-artifact
+    if: ${{ needs.stage-from-artifact.outputs.deployment_url != '' }}
+    permissions:
+      pull-requests: write
+
+    steps:
       - name: Post comment with metadata
         uses: marocchino/sticky-pull-request-comment@v2
         with:
-          number: ${{ env.PR_NUM }}
+          number: ${{ needs.stage-from-artifact.outputs.pr_number }}
           message: |
-            This PR has been staged at ${{ steps.deploy.outputs.deployment-url }}.
-
-
+            This PR has been staged at ${{ needs.stage-from-artifact.outputs.deployment_url }}.
