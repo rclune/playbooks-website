@@ -18,13 +18,13 @@ jobs:
       pr_number: ${{ env.PR_NUM }}
 
     steps:
-      # TODO: get metadata from the workflow_run
-      - name: Get metadata
-        uses: dwhswenson/static-site-workflow/actions/get-metadata@main
-        with:
-          run-id: ${{ github.event.workflow_run.id }}
-          name: "metadata"
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Get PR number and head SHA
+        run: |
+          PR_NUM=$(jq -r '.workflow_run.pull_requests[0].number' "$GITHUB_EVENT_PATH")
+          HEAD_SHA=$(jq -r '.workflow_run.head_commit.id' "$GITHUB_EVENT_PATH")
+
+          echo "PR_NUM=$PR_NUM" | tee -a $GITHUB_ENV
+          echo "HEAD_SHA=$HEAD_SHA" | tee -a $GITHUB_ENV
 
       - uses: myrotvorets/set-commit-status-action@v2.0.1
         with:
@@ -79,3 +79,5 @@ jobs:
           number: ${{ needs.stage-from-artifact.outputs.pr_number }}
           message: |
             This PR has been staged at ${{ needs.stage-from-artifact.outputs.deployment_url }}.
+
+            It has been updated for commit ${{ env.PR_HEADSHA }}.
