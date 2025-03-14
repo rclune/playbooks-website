@@ -24,7 +24,7 @@ jobs:
           HEAD_SHA=$(jq -r '.workflow_run.head_commit.id' "$GITHUB_EVENT_PATH")
 
           echo "PR_NUM=$PR_NUM" | tee -a $GITHUB_ENV
-          echo "HEAD_SHA=$HEAD_SHA" | tee -a $GITHUB_ENV
+          echo "PR_HEADSHA=$HEAD_SHA" | tee -a $GITHUB_ENV
 
       - uses: myrotvorets/set-commit-status-action@v2.0.1
         with:
