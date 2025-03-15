@@ -15,19 +15,9 @@ jobs:
 
     # TODO: move this to a separate action
     steps:
-      #- name: Get PR number and head SHA
-        #run: |
-          #PR_NUM=$(jq -r '.workflow_run.pull_requests[0].number' "$GITHUB_EVENT_PATH")
-          #HEAD_SHA=$(jq -r '.workflow_run.head_commit.id' "$GITHUB_EVENT_PATH")
-
-          #echo "PR_NUM=$PR_NUM" | tee -a $GITHUB_ENV
-          #echo "PR_HEADSHA=$HEAD_SHA" | tee -a $GITHUB_ENV
-
-      - name: tmp checkout
-        uses: actions/checkout@v4
       - name: Get PR metadata from action
         id: pr-metadata
-        uses: ./.github/actions/pr-info-from-workflow-run
+        uses: omsf-eco-infra/static-site-tools/pr-info-from-workflow-run@main
 
   stage:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
@@ -41,6 +31,7 @@ jobs:
       pr-number: ${{ fromJSON(needs.get-metadata.outputs.pr_number) }}  # convert to int
       pr-headsha: ${{ needs.get-metadata.outputs.pr_headsha }}
       project-name: ${{ vars.CLOUDFLARE_PROJECT_NAME }}
+      html-dir: public
     secrets:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
