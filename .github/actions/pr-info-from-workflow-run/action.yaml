@@ -15,6 +15,7 @@ runs:
     pr-author: ${{ steps.extract.outputs.pr-author }}
   steps:
     - name: Extract PR metadata
+      shell: bash
       id: extract
       run: |
         echo "::set-output name=pr-number::${{ github.event.workflow_run.head_repository.pull_requests[0].number }}"
