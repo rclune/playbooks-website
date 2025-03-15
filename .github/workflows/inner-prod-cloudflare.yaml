@@ -11,11 +11,9 @@ on:
       CLOUDFLARE_API_TOKEN:
         description: "API token for Cloudflare"
         required: true
-        type: string
       CLOUDFLARE_ACCOUNT_ID:
         description: "Account ID for Cloudflare"
         required: true
-        type: string
 
 jobs:
   deploy-from-artifact:
