@@ -16,4 +16,4 @@ runs:
     - name: Check links
       uses: lycheeverse/lychee-action@v2
       with:
-        args: --base ${{ inputs.base-url }} ${{ inputs.site-directory }}
+        args: --base ${{ inputs.base-url }} ${{ inputs.site-directory }}/
