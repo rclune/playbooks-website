@@ -75,6 +75,8 @@ jobs:
       pull-requests: write
       statuses: write
 
+    steps:
+
       - uses: myrotvorets/set-commit-status-action@v2.0.1
         if: ${{ always() }}
         env:
@@ -87,8 +89,6 @@ jobs:
           context: 'Upload to Cloudflare'
           description: ${{ job.status == 'success' && env.DEPLOY_SUCCESS || env.DEPLOY_FAILURE }}
 
-
-    steps:
       - name: Post comment with metadata
         uses: marocchino/sticky-pull-request-comment@v2
         with:
