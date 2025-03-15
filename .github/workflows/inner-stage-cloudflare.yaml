@@ -34,6 +34,7 @@ jobs:
     permissions:
       statuses: write
 
+    steps:
       - uses: myrotvorets/set-commit-status-action@v2.0.1
         with:
           status: pending
