@@ -29,8 +29,19 @@ runs:
       shell: bash
       id: extract
       run: |
-        echo "pr-number=$(jq -r '.workflow_run.head_repository.pull_requests[0].number' $GITHUB_EVENT_PATH)" | tee -a $GITHUB_OUTPUT
-        echo "pr-headsha=$(jq -r '.workflow_run.head_repository.pull_requests[0].head.sha' $GITHUB_EVENT_PATH)" | tee -a $GITHUB_OUTPUT
-        echo "pr-title=$(jq -r '.workflow_run.head_repository.pull_requests[0].title' $GITHUB_EVENT_PATH)" | tee -a $GITHUB_OUTPUT
-        echo "pr-body=$(jq -r '.workflow_run.head_repository.pull_requests[0].body' $GITHUB_EVENT_PATH)" | tee -a $GITHUB_OUTPUT
-        echo "pr-author=$(jq -r '.workflow_run.head_repository.pull_requests[0].user.login' $GITHUB_EVENT_PATH)" | tee -a $GITHUB_OUTPUT
+        PR_NUMBER=$(jq -r '.workflow_run.pull_requests[0].number' "$GITHUB_EVENT_PATH")
+        HEAD_SHA=$(jq -r '.workflow_run.head_commit.id' "$GITHUB_EVENT_PATH")
+        PR_TITLE=$(jq -r '.workflow_run.pull_requests[0].title' "$GITHUB_EVENT_PATH")
+        PR_BODY=$(jq -r '.workflow_run.pull_requests[0].body' "$GITHUB_EVENT_PATH")
+        PR_AUTHOR=$(jq -r '.workflow_run.pull_requests[0].user.login' "$GITHUB_EVENT_PATH")
+
+        echo "pr-number=$PR_NUMBER" | tee -a $GITHUB_OUTPUT
+        echo "pr-headsha=$HEAD_SHA" | tee -a $GITHUB_OUTPUT
+        echo "pr-title=$PR_TITLE" | tee -a $GITHUB_OUTPUT
+
+        # The body of the PR can be multiline, so we wrap it <<EOF
+        echo "pr-body<<EOF" | tee -a $GITHUB_OUTPUT
+        echo "$PR_BODY" | tee -a $GITHUB_OUTPUT
+        echo "EOF" | tee -a $GITHUB_OUTPUT
+
+        echo "pr-author=$PR_AUTHOR" | tee -a $GITHUB_OUTPUT
