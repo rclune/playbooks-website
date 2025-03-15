@@ -85,7 +85,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           status: ${{ job.status == 'success' && 'success' || 'failure' }}
-          sha: ${{ env.PR_HEADSHA }}
+          sha: ${{ needs.start-deployment.outputs.pr_headsha }}
           context: 'Upload to Cloudflare'
           description: ${{ job.status == 'success' && env.DEPLOY_SUCCESS || env.DEPLOY_FAILURE }}
 
