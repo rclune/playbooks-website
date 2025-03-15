@@ -26,7 +26,7 @@ jobs:
   stage:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     needs: get-metadata
-    uses: ./.github/workflows/inner-stage-cloudflare.yaml
+    uses: omsf-eco-infra/static-site-tools/.github/workflows/stage-cloudflare.yaml@main
     permissions:
       statuses: write
       pull-requests: write
