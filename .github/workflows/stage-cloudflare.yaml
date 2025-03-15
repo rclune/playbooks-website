@@ -22,6 +22,8 @@ jobs:
 
           echo "PR_NUM=$PR_NUM" | tee -a $GITHUB_ENV
           echo "PR_HEADSHA=$HEAD_SHA" | tee -a $GITHUB_ENV
+      - name: tmp checkout
+        uses: actions/checkout@v2
       - name: Get PR metadata from action
         uses: ./github/actions/pr-info-from-workflow-run
 
