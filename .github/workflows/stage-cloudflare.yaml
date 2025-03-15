@@ -22,11 +22,13 @@ jobs:
 
           echo "PR_NUM=$PR_NUM" | tee -a $GITHUB_ENV
           echo "PR_HEADSHA=$HEAD_SHA" | tee -a $GITHUB_ENV
+      - name: Get PR metadata from action
+        uses: ./github/actions/pr-info-from-workflow-run
 
   stage:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     needs: get-metadata
-    uses: ./.github/workflows/inner-stage-cloudflare.yaml
+    uses: omsf-eco-infra/static-site-tools/.github/workflows/stage-cloudflare.yaml@main
     permissions:
       statuses: write
       pull-requests: write
