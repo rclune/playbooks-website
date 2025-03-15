@@ -5,14 +5,25 @@ description: >
   about the pull request. This action extracts the PR information from the
   workflow run event and sets it as output variables.
 
+outputs:
+  pr-number:
+    description: The number of the pull request.
+    value: ${{ steps.extract.outputs.pr-number }}
+  pr-headsha:
+    description: The head SHA of the pull request.
+    value: ${{ steps.extract.outputs.pr-headsha }}
+  pr-title:
+    description: The title of the pull request.
+    value: ${{ steps.extract.outputs.pr-title }}
+  pr-body:
+    description: The body of the pull request.
+    value: ${{ steps.extract.outputs.pr-body }}
+  pr-author:
+    description: The author of the pull request.
+    value: ${{ steps.extract.outputs.pr-author }}
+
 runs:
   using: 'composite'
-  outputs:
-    pr-number: ${{ steps.extract.outputs.pr-number }}
-    pr-headsha: ${{ steps.extract.outputs.pr-headsha }}
-    pr-title: ${{ steps.extract.outputs.pr-title }}
-    pr-body: ${{ steps.extract.outputs.pr-body }}
-    pr-author: ${{ steps.extract.outputs.pr-author }}
   steps:
     - name: Extract PR metadata
       shell: bash
