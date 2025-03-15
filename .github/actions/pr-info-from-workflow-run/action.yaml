@@ -1,0 +1,24 @@
+name: Extract PR information from a workflow run event
+description: >
+  When a workflow_run workflow is triggered by a workflow that was, in turn,
+  triggered by a pull request, sometimes you need the detailed information
+  about the pull request. This action extracts the PR information from the
+  workflow run event and sets it as output variables.
+
+runs:
+  using: 'composite'
+  outputs:
+    pr-number: ${{ steps.extract.outputs.pr-number }}
+    pr-headsha: ${{ steps.extract.outputs.pr-headsha }}
+    pr-title: ${{ steps.extract.outputs.pr-title }}
+    pr-body: ${{ steps.extract.outputs.pr-body }}
+    pr-author: ${{ steps.extract.outputs.pr-author }}
+  steps:
+    - name: Extract PR metadata
+      id: extract
+      run: |
+        echo "::set-output name=pr-number::${{ github.event.workflow_run.head_repository.pull_requests[0].number }}"
+        echo "::set-output name=pr-headsha::${{ github.event.workflow_run.head_repository.pull_requests[0].head.sha }}"
+        echo "::set-output name=pr-title::${{ github.event.workflow_run.head_repository.pull_requests[0].title }}"
+        echo "::set-output name=pr-body::${{ github.event.workflow_run.head_repository.pull_requests[0].body }}"
+        echo "::set-output name=pr-author::${{ github.event.workflow_run.head_repository.pull_requests[0].user.login }}"
