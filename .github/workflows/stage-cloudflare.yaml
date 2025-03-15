@@ -25,7 +25,7 @@ jobs:
       - name: tmp checkout
         uses: actions/checkout@v2
       - name: Get PR metadata from action
-        uses: ./github/actions/pr-info-from-workflow-run
+        uses: ./.github/actions/pr-info-from-workflow-run
 
   stage:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
