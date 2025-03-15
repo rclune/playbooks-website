@@ -29,8 +29,8 @@ runs:
       shell: bash
       id: extract
       run: |
-        echo "pr-number=${{ github.event.workflow_run.head_repository.pull_requests[0].number }}" | tee -a $GITHUB_OUTPUT
-        echo "pr-headsha=${{ github.event.workflow_run.head_repository.pull_requests[0].head.sha }}" | tee -a $GITHUB_OUTPUT
-        echo "pr-title=${{ github.event.workflow_run.head_repository.pull_requests[0].title }}" | tee -a $GITHUB_OUTPUT
-        echo "pr-body=${{ github.event.workflow_run.head_repository.pull_requests[0].body }}" | tee -a $GITHUB_OUTPUT
-        echo "pr-author=${{ github.event.workflow_run.head_repository.pull_requests[0].user.login }}" | tee -a $GITHUB_OUTPUT
+        echo "pr-number=$(jq -r '.workflow_run.head_repository.pull_requests[0].number' $GITHUB_EVENT_PATH)" | tee -a $GITHUB_OUTPUT
+        echo "pr-headsha=$(jq -r '.workflow_run.head_repository.pull_requests[0].head.sha' $GITHUB_EVENT_PATH)" | tee -a $GITHUB_OUTPUT
+        echo "pr-title=$(jq -r '.workflow_run.head_repository.pull_requests[0].title' $GITHUB_EVENT_PATH)" | tee -a $GITHUB_OUTPUT
+        echo "pr-body=$(jq -r '.workflow_run.head_repository.pull_requests[0].body' $GITHUB_EVENT_PATH)" | tee -a $GITHUB_OUTPUT
+        echo "pr-author=$(jq -r '.workflow_run.head_repository.pull_requests[0].user.login' $GITHUB_EVENT_PATH)" | tee -a $GITHUB_OUTPUT
