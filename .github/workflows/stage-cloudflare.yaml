@@ -27,9 +27,12 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     needs: get-metadata
     uses: ./.github/workflows/inner-stage-cloudflare.yaml
+    permissions:
+      statuses: write
+      pull-requests: write
     with:
-      run_id: ${{ github.event.workflow_run.id }}
-      pr-number: ${{ needs.get-metadata.outputs.pr_number }}
+      run-id: ${{ github.event.workflow_run.id }}
+      pr-number: ${{ fromJSON(needs.get-metadata.outputs.pr_number) }}  # convert to int
       pr-headsha: ${{ needs.get-metadata.outputs.pr_headsha }}
       project-name: ${{ vars.CLOUDFLARE_PROJECT_NAME }}
     secrets:
