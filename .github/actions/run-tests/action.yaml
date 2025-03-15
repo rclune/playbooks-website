@@ -13,7 +13,16 @@ inputs:
 runs:
   using: 'composite'
   steps:
+    - name: Define lychee args
+      shell: bash
+      run: |
+        if [ "${{ inputs.base-url }}" ]; then
+          LYCHEE_ARGS="--base ${{ inputs.base-url }} "
+        fi
+        LYCHEE_ARGS="${LYCHEE_ARGS}${{ inputs.site-directory }}/"
+        echo "LYCHEE_ARGS=$LYCHEE_ARGS" >> $GITHUB_ENV
+          
     - name: Check links
       uses: lycheeverse/lychee-action@v2
       with:
-        args: --base ${{ inputs.base-url }} ${{ inputs.site-directory }}/
+        args: ${{ env.LYCHEE_ARGS }}
