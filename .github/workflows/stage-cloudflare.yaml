@@ -96,4 +96,4 @@ jobs:
           message: |
             This PR has been staged at ${{ needs.stage-from-artifact.outputs.deployment_url }}.
 
-            It has been updated for commit ${{ need.start-deployment.outputs.pr_headsha }}.
+            It has been updated for commit ${{ needs.start-deployment.outputs.pr_headsha }}.
