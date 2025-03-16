@@ -19,3 +19,8 @@ jobs:
       - uses: omsf-eco-infra/static-site-tools/build/hugo@main
         with:
           hugo-version: ${{ matrix.hugo-version }}
+
+      - uses: omsf-eco-infra/static-site-tools/common-tests@main
+        with:
+          site-directory: public
+          base-url: ""
