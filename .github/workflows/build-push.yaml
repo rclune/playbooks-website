@@ -14,7 +14,7 @@ jobs:
           submodules: 'recursive'
 
       - name: Build site
-        uses: omsf-eco-infra/static-site-tools/build/hugo@main
+        uses: omsf/static-site-tools/build/hugo@main
         with:
           base-url: ""
 
