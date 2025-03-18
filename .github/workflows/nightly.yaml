@@ -16,11 +16,11 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: 'recursive'
-      - uses: omsf-eco-infra/static-site-tools/build/hugo@main
+      - uses: omsf/static-site-tools/build/hugo@main
         with:
           hugo-version: ${{ matrix.hugo-version }}
 
-      - uses: omsf-eco-infra/static-site-tools/common-tests@main
+      - uses: omsf/static-site-tools/common-tests@main
         with:
           site-directory: public
           base-url: ""
