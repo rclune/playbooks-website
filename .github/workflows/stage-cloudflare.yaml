@@ -10,6 +10,8 @@ jobs:
   get-metadata:
     if: ${{ github.repository == 'omsf/playbooks-website' }}
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read
     outputs:
       pr_number: ${{ steps.pr-metadata.outputs.pr-number }}
       pr_headsha: ${{ steps.pr-metadata.outputs.pr-headsha }}
@@ -19,6 +21,8 @@ jobs:
       - name: Get PR metadata from action
         id: pr-metadata
         uses: omsf/static-site-tools/pr-info-from-workflow-run@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
   stage:
     if: ${{ (github.event.workflow_run.conclusion == 'success') && (github.repository == 'omsf/playbooks-website') }}
