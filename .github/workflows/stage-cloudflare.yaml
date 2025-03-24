@@ -16,7 +16,6 @@ jobs:
       pr_number: ${{ steps.pr-metadata.outputs.pr-number }}
       pr_headsha: ${{ steps.pr-metadata.outputs.pr-headsha }}
 
-    # TODO: move this to a separate action
     steps:
       - name: Get PR metadata from action
         id: pr-metadata
