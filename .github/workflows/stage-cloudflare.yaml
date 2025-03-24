@@ -10,8 +10,6 @@ jobs:
   get-metadata:
     if: ${{ github.repository == 'omsf/playbooks-website' }}
     runs-on: ubuntu-latest
-    permissions:
-      pull-requests: read
     outputs:
       pr_number: ${{ steps.pr-metadata.outputs.pr-number }}
       pr_headsha: ${{ steps.pr-metadata.outputs.pr-headsha }}

@@ -18,11 +18,11 @@ jobs:
         with:
           base-url: ""
 
-      #- name: Test site
-        #uses: omsf/static-site-tools/common-tests@main
-        #with:
-          #site-directory: public
-          #base-url: ""
+      - name: Test site
+        uses: omsf/static-site-tools/common-tests@main
+        with:
+          site-directory: public
+          base-url: ""
 
       - name: Make artifact
         shell: bash
