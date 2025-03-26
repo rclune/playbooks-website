@@ -8,6 +8,6 @@ why: >
   This allows you to define permissions based on roles that an individual might
   take, instead assigning them directly to the individual.
 when: From the beginning
-resources:
+see_also:
   - https://docs.github.com/en/organizations/organizing-members-into-teams/about-teams
 ---
