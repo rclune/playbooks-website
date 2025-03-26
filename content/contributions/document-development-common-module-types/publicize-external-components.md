@@ -13,3 +13,13 @@ why: >
 when: >
   Once you are aware of external contributions
 ---
+
+In some cases, teams prefer to that contributions remain external to the core
+library. This is often to reduce the maintenance burden on the core team, or to
+prevent dependency bloat. So external contributions are instead treated as
+plugins or kits that build on the core library.
+
+While that's a perfectly reasonable decision to make, the problem is that you
+now have no way to connect your users with the external contributions. Creating
+such a mechanism is both a way to help your users and to reward the efforts of
+external contributors, thus encouraging more contributions.
