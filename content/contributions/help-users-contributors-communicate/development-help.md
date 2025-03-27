@@ -15,4 +15,6 @@ implementations:
   - desc: Email list
   - desc: Discourse forum
   - desc: Slack
+see_also:
+  - "[Comparison of different options for communication channels](../compare-communication-channels)"
 ---

@@ -15,4 +15,6 @@ implementations:
   - desc: GitHub Issues
   - desc: StackExchange (e.g., MatterModeling)
   - desc: Slack
+see_also:
+  - "[Comparison of different options for communication channels](../compare-communication-channels)"
 ---
