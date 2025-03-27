@@ -1,7 +1,7 @@
 ---
 layout: practice
 weight: 4
-title: Use conventional commits
+title: Consider using conventional commits
 what: >
   A standardized way to structure the contents of what was completed in a given commit.
 why: >
