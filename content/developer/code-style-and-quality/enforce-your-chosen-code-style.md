@@ -35,8 +35,6 @@ implementations:
       - Highly configurable to match many different style options
       - Provides a VSCode extension for developers
       - Adopted by the NumPy project to help prevent breaking changes due to deprecations
-    disadvantages:
-      - Newer project with few CI options available, mainly used locally
   - desc: Black
     advantages:
       - The standard in linting/formatting for Python projects
