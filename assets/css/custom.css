@@ -27,8 +27,6 @@ article {
 .frontmatter a:visited, .content a:visited { color: var(--link-visited); }
 .frontmatter a:hover, .content a:hover { color: var(--link-hover); }
 
-
-
 .playbook-card-content {
     text-decoration: none;
     color: #000000;
@@ -221,6 +219,17 @@ article {
 .disadvantages {
     flex: 1;
 }
+
+@media screen and (max-width: 768px) {
+    .advantages-disadvantages {
+        flex-direction: column;
+    }
+    .advantages {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
 
 
 /* playbook main pages */
