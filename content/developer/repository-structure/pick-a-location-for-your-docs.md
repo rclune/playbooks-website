@@ -9,7 +9,7 @@ why: >
 when: Inception
 recommendation: Use a top-level docs directory as mentioned in the pip docs
 see_also:
-  - "[Pip Package Anatomy](https://pip.pypa.io/en/stable/development/architecture/anatomy/)"
+  - "[Pip Repository Anatomy](https://pip.pypa.io/en/stable/development/architecture/anatomy/)"
 ---
 
 When starting a new project, it's important to decide where documentation will live within your repository structure. Having a consistent location makes it easier for users and contributors to find the information they need.
