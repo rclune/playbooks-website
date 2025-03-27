@@ -9,5 +9,11 @@ what: >
 why: >
   Contributors should be able to find the project’s software development style,
   etc., so that their contributions can match style and avoid revision cycles.
-level: starting
+when: From the beginning
 ---
+
+As soon as you get started, make the code style and related decisions public.
+Keep in mind that your developer playbook is a living document, so don't worry
+about deciding on every issue. You can always update it as you go. But having a
+public guide will help contributors understand your project's style and
+conventions.
