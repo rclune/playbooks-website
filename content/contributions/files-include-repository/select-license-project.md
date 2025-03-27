@@ -13,6 +13,6 @@ when: >
 recommendation: >
   We recommend using permissive open source licenses. In particular, most OMSF
   projects use the MIT license.
-resources:
+see_also:
   - https://choosealicense.com/
 ---

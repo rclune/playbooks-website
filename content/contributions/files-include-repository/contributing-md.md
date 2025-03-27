@@ -1,7 +1,7 @@
 ---
 layout: practice
 weight: 2
-title: CONTRIBUTING.md
+title: Include a CONTRIBUTING.md file in your repository
 what: >
   A CONTRIBUTING.md file gives an overview of how to contribute to your
   project. It typically links to other references for various types of
@@ -12,6 +12,6 @@ why: >
    expect to find information here.
 when: >
   Around the time of first release
-resources:
+see_also:
   - https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors
 ---

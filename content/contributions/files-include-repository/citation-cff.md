@@ -11,7 +11,7 @@ why: >
   properly indexed.
 when: >
   At first release
-resources:
+see_also:
   - https://citation-file-format.github.io/
   - https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content
 ---
