@@ -1,5 +1,8 @@
 :root {
     --striping-color: #dfe6ec;
+    --link-color: #3182ce;
+    --link-visited: #805ad5;
+    --link-hover: #2c5282;
 }
 
 :root[class~="dark"] {
@@ -13,6 +16,22 @@ h1 {
 
 h2 {
     font-size: 1.5em;
+}
+
+article {
+    padding-left: 1em;
+}
+
+.frontmatter a, .content a { text-decoration: underline; }
+.frontmatter a:link, .content a:link { color: var(--link-color); }
+.frontmatter a:visited, .content a:visited { color: var(--link-visited); }
+.frontmatter a:hover, .content a:hover { color: var(--link-hover); }
+
+
+
+.playbook-card-content {
+    text-decoration: none;
+    color: #000000;
 }
 
 /* landing page (index.html) */
@@ -221,6 +240,7 @@ section.frontmatter {
     padding: 1em;
     margin: 1em;
 }
+
 .frontmatter-section {
     display: grid;
     grid-template-columns: 6em 1fr;
@@ -247,6 +267,11 @@ section.frontmatter {
 
 .implementation:nth-child(odd) div {
     background: var(--striping-color);
+}
+
+.see-also ul {
+    list-style: initial;
+    padding-left: 1.5em;
 }
 
 /* quiz pages */
