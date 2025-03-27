@@ -12,6 +12,6 @@ why: >
    expect to find information here.
 when: >
   Around the time of first release
-resources:
+see_also:
   - https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors
 ---
