@@ -42,4 +42,5 @@ implementations:
 see_also:
   - "[pep8speaks](https://github.com/pep8speaks-org/pep8speaks)"
   - "[Ruff VSCode extension](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff)"
+  - "[Ruff Integrations](https://docs.astral.sh/ruff/integrations/)"
 ---
