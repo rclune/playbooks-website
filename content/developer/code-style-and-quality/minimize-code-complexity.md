@@ -6,7 +6,7 @@ what: >
   Reduce the mental load for those working on your codebase.
 why: >
   This helps to ensure that your code is simple to work with but also ensures that your code is testable.
-when: Post-Release
+when: Mid-Development
 importance: High
 implementations:
   - desc: Cyclomatic complexity
