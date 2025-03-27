@@ -15,10 +15,12 @@ implementations:
   - desc: flamegraph
   - desc: perftester
   - desc: timeit
-recommendation: py-spy
+  - desc: lin_profiler
+recommendation: Any
 see_also:
   - "[Python profiling documentation](https://docs.python.org/3/library/profile.html)"
   - "[py-spy GitHub repository](https://github.com/benfred/py-spy)"
+  - "[line_profiler](https://github.com/pyutils/line_profiler)"
 ---
 
 Profiling helps you identify which parts of your code consume the most time or resources. In scientific software, optimizing these hotspots can dramatically improve overall performance.
