@@ -8,6 +8,6 @@ what: >
 why: >
   This helps create teams with consistent roles.
 when: From the beginning
-resources:
+see_also:
   - https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization
 ---

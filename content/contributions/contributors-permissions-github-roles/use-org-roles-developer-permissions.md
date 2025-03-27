@@ -10,6 +10,6 @@ why: >
   Unlike external contributors, core developers will typically need similar
   access to all repositories in the organization.
 when: From the beginning
-resources:
+see_also:
   - https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization#about-pre-defined-organization-roles
 ---
