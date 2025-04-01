@@ -21,3 +21,5 @@ A good test plan typically covers:
 6. **Responsibilities**: Who is responsible for different aspects of testing
 
 Having this plan documented helps ensure consistent testing practices across the team and throughout the life of the project, reducing the chance that critical tests are overlooked. Your test plan might just be what you have in CI but for tests that aren't running in CI, this can be crucial in ensuring and documenting reproducibility. 
+
+For some projects, the test plan is very simple and can easily be deduced from CI. However, as testing grows in complexity, and different tests are run under different circumstances, it becomes important to have a document that describes the test plan.
