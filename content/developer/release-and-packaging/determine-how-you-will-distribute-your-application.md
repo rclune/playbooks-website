@@ -9,7 +9,7 @@ why: >
 when: Mid-Development
 importance: Medium
 implementations:
-  - desc: Conda
+  - desc: conda-forge/Bioconda/etc.
   - desc: PyPI
   - desc: Docker
 recommendation: conda via conda-forge
@@ -18,3 +18,4 @@ see_also:
   - "[Grayskull - Conda package generator](https://github.com/conda/grayskull)"
   - "[Conda-Forge Package Maintainer Guide](https://conda-forge.org/docs/maintainer/adding_pkgs/#creating-recipes)"
 ---
+As mentioned in ["Provide a simple way to install requirements"](/developer/release-and-packaging/provide-a-simple-way-to-install-requirements/), the use of `conda` as a packaging tool is less common in the broader Python programming space, instead preferring `pip`-installable packages. As practice, we recommend that you attempt to distribute your work in all three of the listed implementations to provide your users with flexibility as to how they will interact with your software.
