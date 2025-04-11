@@ -219,6 +219,7 @@ article {
 }
 
 .disadvantages {
+    margin-left: 1em;
     flex: 1;
 }
 
@@ -228,7 +229,10 @@ article {
     }
     .advantages {
         margin-right: 0;
-        margin-left: 0;
+        margin-left: 1em;
+    }
+    .disadvantages {
+        margin-left: 1em;
     }
 }
 
@@ -276,12 +280,17 @@ div .implementations {
     margin-bottom: 0.5em;
 }
 
-.implementation {
+ul.implementations div.implementation {
     border: 1px solid #ccc;
     margin-left: 1em;
 }
 
-.implementation:nth-child(odd) div {
+ul.implementations-simple {
+    list-style: initial;;
+    padding-left: 1.5em;
+}
+
+ul.implementations li:nth-child(odd) div {
     background: var(--striping-color);
 }
 

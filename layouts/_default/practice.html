@@ -33,17 +33,24 @@
       {{ end }}
 
       {{ if .Params.implementations }}
+
+      {{/* figure out if we have details or not */}}
+      {{ $.Scratch.Set "ulclassname" "implementations-simple" }}
+        {{ range .Params.implementations }}
+        {{ if or .advantages .disadvantages }}
+        {{ $.Scratch.Set "ulclassname" "implementations" }}
+        {{ end }}
+      {{ end }}
+
       <div class="implementations"><b>Implementations:</b>
-      {{/* hasAdv might not longer be needed */}}
-      {{ $hasAdv := where .Params.implementations "isset advantages" true }}
-        <ul class="implementations">
+      <ul class="{{ $.Scratch.Get "ulclassname" }}">
         {{ range $impl := .Params.implementations }}
-          <div class="implementation">
+        <li><div class="implementation">
             <div class="impl-desc">{{ $impl.desc | markdownify }}</div>
             {{ if (or $impl.advantages $impl.disadvantages) }}
             {{ partial "advantages-disadvantages.html" $impl }}
             {{ end }}
-          </div>
+            </div></li>
         {{ end }}
         </ul>
       </div>
