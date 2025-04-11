@@ -36,10 +36,11 @@
 
       {{/* figure out if we have details or not */}}
       {{ $.Scratch.Set "ulclassname" "implementations-simple" }}
-        {{ range .Params.implementations }}
-        {{ if or .advantages .disadvantages }}
-        {{ $.Scratch.Set "ulclassname" "implementations" }}
-        {{ end }}
+      {{ range .Params.implementations }}
+      {{ if or .advantages .disadvantages }}
+      {{ $.Scratch.Set "ulclassname" "implementations" }}
+      {{ break }}
+      {{ end }}
       {{ end }}
 
       <div class="implementations"><b>Implementations:</b>
