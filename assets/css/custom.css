@@ -4,6 +4,8 @@
     --link-visited: #805ad5;
     --link-hover: #2c5282;
     --text-color: #000000;
+    --text-font: "Barlow", sans-serif;
+    --title-font: "Barlow", sans-serif;
 }
 
 :root[class~="dark"] {
@@ -11,6 +13,13 @@
     --text-color: #ffffff;
 }
 
+body {
+    font-family: var(--text-font);
+}
+
+h1, h2, h3 {
+    font-family: var(--title-font);
+}
 
 h1 {
    font-size: 2em;
