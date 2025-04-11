@@ -271,6 +271,11 @@ section.frontmatter {
     content: ":";
 }
 
+div .implementations {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
 .implementation {
     border: 1px solid #ccc;
     margin-left: 1em;
