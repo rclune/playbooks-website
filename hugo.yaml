@@ -48,6 +48,9 @@ menu:
         type: search
 
 params:
+  theme:
+    default: light
+    displayToggle: false
   search:
     enable: true
     type: flexsearch

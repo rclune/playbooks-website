@@ -1,16 +1,39 @@
+/* OMSF style guide colors */
 :root {
-    --striping-color: #dfe6ec;
-    --link-color: #3182ce;
-    --link-visited: #805ad5;
-    --link-hover: #2c5282;
+    --omsf-primary: #bef2e1;
+    --omsf-secondary-yellow: #fbe56f;
+    --omsf-secondary-salmon: #ea96a9;
+    --omsf-tertiary-blue: #64a1b2;
+    --omsf-tertiary-pink: #f1cae0;
+    --omsf-tertiary-green: #a6d382;
+    --agathe-primary-fade: #ebfaf7;
+    --agathe-wrapper: #e4fff6;
+    --agathe-dark: #62978d;
+    --omsf-outline-grey: #efefef;
+    --primary-hue: 160;
+    --primary-saturation: 67%;
+    --primary-lightness: 85%;
+}
+
+:root {
+    --striping-color: var(--agathe-wrapper);  /* prev #dfe6ec; */
+    --link-color: #000000;
+    --link-visited: #000000;
+    --link-hover: var(--agathe-dark);
     --text-color: #000000;
-    --text-font: "Barlow", sans-serif;
-    --title-font: "Barlow", sans-serif;
+    --text-font: "Barlow";
+    --title-font: "Barlow";
 }
 
 :root[class~="dark"] {
     --striping-color: #2b2b2b;
     --text-color: #ffffff;
+    --link-color: #ffffff;
+    --link-visited: #ffffff;
+}
+
+.hextra-footer {
+    background: var(--omsf-primary);
 }
 
 body {
@@ -33,6 +56,38 @@ article {
     padding-left: 1em;
 }
 
+.content ul {
+    list-style-type: "＞ ";
+    li {
+        padding-left: 0.5em;
+    }
+    margin-left: 2rem;
+}
+
+.nav-container {
+    border-top: 10px solid var(--omsf-primary);
+}
+
+.sidebar-container {
+    color: var(--text-color);
+    /*background: var(--agathe-wrapper);*/
+}
+
+.sidebar-container a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.sidebar-container a:hover {
+    background: var(--omsf-primary);
+}
+
+.sidebar-active-item {
+    background: var(--agathe-wrapper);
+}
+
+.prev-next a:hover { color: var(--link-hover); }
+
 .frontmatter a, .content a { text-decoration: underline; }
 .frontmatter a:link, .content a:link { color: var(--link-color); }
 .frontmatter a:visited, .content a:visited { color: var(--link-visited); }
@@ -45,16 +100,16 @@ article {
 
 /* landing page (index.html) */
 .homepage-content {
-    margin: 0% 5%;
+    margin: 0% 10%;
 }
 
 /* -- landing page: hero -- */
 .hero {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
     align-items: center;
     margin-top: 4em;
-    margin-left: 2em;
     margin-bottom: 3em;
 }
 
@@ -70,7 +125,7 @@ article {
 
 .hero-description {
     width: 60%;  /* this is unfortunately a magic number; works to my eye */
-    padding: 1em;
+    /*padding: 1em;*/
     margin-right: 2em;
 }
 
@@ -90,7 +145,7 @@ article {
     }
 
     .hero-image img {
-        width: 75%;
+        width: 100%;
         height: auto;
     }
 }
@@ -114,7 +169,7 @@ article {
     flex-basis: 48%;
 
     /* style the border and shadow */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    /*box-shadow: 0 4px 8px 0 #e4fff6;*/
     transition: 0.3s;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -142,7 +197,7 @@ article {
 }
 
 .playbook-card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 #b5f2e1;
 }
 
 @media screen and (max-width: 768px) {
@@ -207,11 +262,17 @@ article {
 .list-advantages {
     li::marker { color: green; }
     list-style-type: "✓ ";
+    li {
+        padding-left: 0.5em;
+    }
 }
 
 .list-disadvantages {
     li::marker { color: red; }
     list-style-type: "✗ ";
+    li {
+        padding-left: 0.5em;
+    }
 }
 
 .advantages-disadvantages {
@@ -275,7 +336,7 @@ section.frontmatter {
 
 .required {
     display: grid;
-    grid-template-columns: 6em 1fr;
+    grid-template-columns: 4em 1fr;
 }
 
 .frontmatter-section .label {
@@ -302,8 +363,11 @@ ul.implementations div.implementation {
 }
 
 ul.implementations-simple {
-    list-style: initial;;
+    list-style-type: "＞ ";
     padding-left: 1.5em;
+    li {
+        padding-left: 0.5em;
+    }
 }
 
 ul.implementations li:nth-child(odd) div {
@@ -311,7 +375,10 @@ ul.implementations li:nth-child(odd) div {
 }
 
 .see-also ul {
-    list-style: initial;
+    list-style-type: "＞ ";
+    li {
+        padding-left: 0.5em;
+    }
     padding-left: 1.5em;
 }
 
