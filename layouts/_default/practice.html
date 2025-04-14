@@ -9,13 +9,9 @@
       </section>
       <h2>{{ .Title }}</h2>
       <section class="frontmatter">
-        <div class="frontmatter-section">
+        <div class="frontmatter-section required">
           <div class="label">What</div><div class="values">{{ .Params.what }}</div>
-        </div>
-        <div class="frontmatter-section">
           <div class="label">Why</div><div class="values">{{ .Params.why }}</div>
-        </div>
-        <div class="frontmatter-section">
           <div class="label">When</div><div class="values">{{ .Params.when }}</div>
         </div>
 
@@ -43,7 +39,8 @@
       {{ end }}
       {{ end }}
 
-      <div class="implementations"><b>Implementations:</b>
+      <div class="implementations frontmatter-section">
+      <b>Implementations:</b>
       <ul class="{{ $.Scratch.Get "ulclassname" }}">
         {{ range $impl := .Params.implementations }}
         <li><div class="implementation">
@@ -58,13 +55,13 @@
       {{ end }}
 
       {{ if .Params.recommendation }}
-      <div class="recommendation"><b>Recommendation:</b>
+      <div class="recommendation frontmatter-section"><b>Recommendation:</b>
       {{ .Params.recommendation }}
       </div>
       {{ end }}
 
       {{ if .Params.see_also }}
-      <div class="see-also"><b>See also:</b>
+      <div class="see-also frontmatter-section"><b>See also:</b>
       <ul>
       {{ range $also := .Params.see_also }}
         <li>{{ $also | markdownify }}</li>
@@ -74,7 +71,7 @@
       {{ end }}
 
       {{ if .Params.note }}
-      <div class="note"><i>Note:</i> {{ .Params.note }}</div>
+      <div class="note frontmatter-section"><i>Note:</i> {{ .Params.note }}</div>
       {{ end }}
   </section>
   <section class="content">
