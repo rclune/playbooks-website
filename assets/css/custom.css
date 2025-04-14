@@ -228,6 +228,7 @@ article {
 }
 
 .disadvantages {
+    margin-left: 1em;
     flex: 1;
 }
 
@@ -237,7 +238,10 @@ article {
     }
     .advantages {
         margin-right: 0;
-        margin-left: 0;
+        margin-left: 1em;
+    }
+    .disadvantages {
+        margin-left: 1em;
     }
 }
 
@@ -257,14 +261,21 @@ article {
 /* practice pages */
 section.frontmatter {
     border: 1px solid #ccc;
-    padding: 1em;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 0em;  /* each frontmatter-section has bottom margin */
     margin: 1em;
 }
 
 .frontmatter-section {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.required {
     display: grid;
     grid-template-columns: 6em 1fr;
-    width: 100%;
 }
 
 .frontmatter-section .label {
@@ -280,12 +291,22 @@ section.frontmatter {
     content: ":";
 }
 
-.implementation {
-    border: 1px solid #ccc;
-    margin-left: 1em;
+div .frontmatter-title {
+    width: 100%;
 }
 
-.implementation:nth-child(odd) div {
+ul.implementations div.implementation {
+    margin-top: 0.5em;
+    margin-left: 1em;
+    padding: 0.5em;
+}
+
+ul.implementations-simple {
+    list-style: initial;;
+    padding-left: 1.5em;
+}
+
+ul.implementations li:nth-child(odd) div {
     background: var(--striping-color);
 }
 
