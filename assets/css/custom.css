@@ -64,8 +64,79 @@ article {
     margin-left: 2rem;
 }
 
-.nav-container {
-    border-top: 10px solid var(--omsf-primary);
+nav .menu-container {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-items li {
+    display: block;
+}
+
+/*.menu-items a {*/
+/*}*/
+
+nav.topnav {
+    display: flex
+    position: sticky;
+    top: 0px;
+    border-bottom: 2px solid gray;
+    border-top: 20px solid var(--omsf-primary);
+    padding: 1ch 2ch 0;
+    align-items: flex-end;
+    z-index: 1000;
+}
+
+nav ul.menu-container {
+  list-style: none;
+  overflow: visible;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul.menu-container li {
+  /*text-align: right;*/
+  margin-left: 5%;
+}
+
+nav ul.menu-container li a {
+  text-decoration: none;
+  font-size: 1.2375rem;
+}
+
+nav ul.menu-container li:hover {
+  background-color: var(--agathe-primary-fade);
+}
+
+nav .playbook-menu {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+li.menu-has-children a.playbook-menu:after {
+    content: "\0023F7";
+    padding-left: 15px;
+    color: var(--agathe-dark);
+}
+
+.menu-items {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 100;
+    background-color: white;
+    border-top: 4px solid var(--omsf-primary);
+}
+
+li.menu-has-children:hover .menu-items {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    li.menu-has-children {
+        display: none;
+    }
 }
 
 .sidebar-container {
