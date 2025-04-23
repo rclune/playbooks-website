@@ -34,7 +34,8 @@
   <div class="nav-container-blur hx-pointer-events-none hx-absolute hx-z-[-1] hx-h-full hx-w-full hx-bg-white dark:hx-bg-dark hx-shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] contrast-more:hx-shadow-[0_0_0_1px_#000] dark:hx-shadow-[0_-1px_0_rgba(255,255,255,.1)_inset] contrast-more:dark:hx-shadow-[0_0_0_1px_#fff]"></div>
 
   <nav class="topnav hx-mx-auto hx-flex hx-items-center hx-justify-end hx-gap-2 hx-h-16 hx-px-6 {{ $navWidth }}">
-    <a class="hx-flex hx-items-center hover:hx-opacity-75 ltr:hx-mr-auto rtl:hx-ml-auto" href="{{ $logoLink }}">
+    <div class="hx-flex ltr:hx-mr-auto logo-container">
+    <a class="header-logo hx-items-center hover:hx-opacity-75" href="{{ $logoLink }}">
       {{- if (.Site.Params.navbar.displayLogo | default true) }}
         <img class="hx-mr-2 hx-block dark:hx-hidden" src="{{ $logoPath | relURL }}" alt="{{ .Site.Title }}" height="{{ $logoHeight }}" width="{{ $logoWidth }}" />
         <img class="hx-mr-2 hx-hidden dark:hx-block" src="{{ $logoDarkPath | relURL }}" alt="{{ .Site.Title }}" height="{{ $logoHeight }}" width="{{ $logoWidth }}" />
@@ -45,7 +46,11 @@
     </a>
 
     {{/* display current playbook name */}}
+    <span class="header-playbook-label">
     {{ .Store.Get "currentPlaybookName" }}
+    </span>
+
+    </div>
 
     <ul class="menu-container">
       <li class="menu-has-children">
@@ -103,8 +108,11 @@
     {{- end -}}
 
 
+    {{/* Hamburger wasn't working on main page */}}
+    {{- if .Parent -}}
     <button type="button" aria-label="Menu" class="hamburger-menu -hx-mr-2 hx-rounded hx-p-2 active:hx-bg-gray-400/20 md:hx-hidden">
       {{- partial "utils/icon.html" (dict "name" "hamburger-menu" "attributes" "height=24") -}}
     </button>
+    {{- end -}}
   </nav>
 </div>

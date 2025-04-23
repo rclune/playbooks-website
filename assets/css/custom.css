@@ -34,6 +34,25 @@
 
 .hextra-footer {
     background: var(--omsf-primary);
+    padding: 1em 1em;
+}
+
+footer .hx-flex {
+    align-items: end;
+}
+
+footer .hextra-custom-footer {
+    width: 100%;
+}
+
+footer .column-1 {
+    float: left;
+    width: 50%;
+    color: var(--text-color);
+    a {
+        color: var(--text-color);
+        text-decoration: underline;
+    }
 }
 
 body {
@@ -76,13 +95,26 @@ nav .menu-container {
 /*.menu-items a {*/
 /*}*/
 
+.logo-container {
+    align-items: flex-end;
+}
+
+.header-logo {
+    margin: 0;
+    padding: 1.375ch 2.75ch 0.5ch;
+    text-align: center;
+}
+
+.nav-container {
+    font-size: 1.2375rem;
+    border-top: 20px solid var(--omsf-primary);
+    border-bottom: 2px solid gray;
+}
+
 nav.topnav {
     display: flex
     position: sticky;
     top: 0px;
-    border-bottom: 2px solid gray;
-    border-top: 20px solid var(--omsf-primary);
-    padding: 1ch 2ch 0;
     align-items: flex-end;
     z-index: 1000;
 }
@@ -96,7 +128,7 @@ nav ul.menu-container {
 
 nav ul.menu-container li {
   /*text-align: right;*/
-  margin-left: 5%;
+  /*margin-left: 5%;*/
 }
 
 nav ul.menu-container li a {
@@ -129,12 +161,26 @@ li.menu-has-children a.playbook-menu:after {
     border-top: 4px solid var(--omsf-primary);
 }
 
+.menu-items a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid grey;
+    work-break: keep-all;
+}
+
 li.menu-has-children:hover .menu-items {
     display: block;
 }
 
 @media screen and (max-width: 768px) {
     li.menu-has-children {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    span.header-playbook-label {
         display: none;
     }
 }
@@ -268,7 +314,7 @@ li.menu-has-children:hover .menu-items {
 }
 
 .playbook-card:hover {
-    box-shadow: 0 8px 16px 0 #b5f2e1;
+    box-shadow: 0 0 16px 4px #b5f2e1;
 }
 
 @media screen and (max-width: 768px) {

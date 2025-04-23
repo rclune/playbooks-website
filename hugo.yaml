@@ -48,6 +48,15 @@ menu:
         type: search
 
 params:
+  editURL:
+    enabled: true
+    base: "https://github.com/omsf/playbooks-website/edit/main"
+  navbar:
+    displayTitle: false
+    logo:
+      path: images/logo-black.svg
+      height: "80%"
+      width: "80%"
   theme:
     default: light
     displayToggle: false
