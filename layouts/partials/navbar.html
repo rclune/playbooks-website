@@ -13,7 +13,7 @@
   {{ end -}}
 {{- end -}}
 
-{{/* identify the current plabook */}}
+{{/* identify the current playbook */}}
 {{- $currentPage := . -}}
 {{- if eq .Layout "playbook" -}}
   {{- $currentPage.Store.Set "currentPlaybook" . -}}
