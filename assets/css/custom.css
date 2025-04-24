@@ -6,6 +6,8 @@
     --omsf-tertiary-blue: #64a1b2;
     --omsf-tertiary-pink: #f1cae0;
     --omsf-tertiary-green: #a6d382;
+    --agathe-background: #f6f6f6;
+    --agathe-background-dark: #faf9f5;
     --agathe-primary-fade: #ebfaf7;
     --agathe-wrapper: #e4fff6;
     --agathe-dark: #62978d;
@@ -92,9 +94,6 @@ nav .menu-container {
     display: block;
 }
 
-/*.menu-items a {*/
-/*}*/
-
 .logo-container {
     align-items: flex-end;
 }
@@ -136,8 +135,13 @@ nav ul.menu-container li a {
   font-size: 1.2375rem;
 }
 
-nav ul.menu-container li:hover {
+nav ul.menu-container li.menu-has-children:hover {
   background-color: var(--agathe-primary-fade);
+}
+
+nav ul.menu-container .menu-items a:hover {
+    background-color: white;
+    color: var(--agathe-dark);
 }
 
 nav .playbook-menu {
