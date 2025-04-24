@@ -96,12 +96,17 @@ nav .menu-container {
 
 .logo-container {
     align-items: flex-end;
+    margin-left: 2em;
 }
 
 .header-logo {
-    margin: 0;
-    padding: 1.375ch 2.75ch 0.5ch;
+    margin: 2.75ch 0 0.5ch 2.75ch;
     text-align: center;
+}
+
+.hx-mr-2 {
+    /* turn of hextra's margin, because we don't have text */
+    margin-right: 0;
 }
 
 .nav-container {
