@@ -23,9 +23,11 @@
         {{- $editURL = urls.JoinPath $editURL $sourceDir $path -}}
       {{- end -}}
     {{- end -}}
-    <a href="{{ $contributing }}" target="_blank" rel="noreferrer">Contribute to this playbook!</a>
+    <a href="{{ $contributing }}" target="_blank" rel="noreferrer">Contribute to the playbooks!</a>
     <br/>
-    <a href="{{ $editURL }}" target="_blank" rel="noreferrer">See this page on GitHub</a>
+    {{/* hide the GitHub link for index page */}}
+    <a href="{{ $editURL }}" target="_blank" rel="noreferrer"
+       {{- if not .Parent -}}style="visibility:hidden;"{{- end -}}>See this page on GitHub</a>
   {{- end -}}
   </div>
 
