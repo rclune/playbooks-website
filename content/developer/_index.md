@@ -1,6 +1,6 @@
 ---
 title: Developer Playbook
-weight: 2
+weight: 1
 layout: playbook
 ---
 

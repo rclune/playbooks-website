@@ -1,6 +1,7 @@
 ---
 title: Benchmarking Playbook
 layout: playbook
+weight: 3
 ---
 This playbook is designed to help projects improve the accuracy and reliability of their scientific results through effective benchmarking practices. The target audience is the technical and scientific leadership of scientific software and research projects at OMSF or other open science projects. This document will cover key aspects of managing and implementing benchmarking efforts, with a focus on ensuring that tools and methods meet high-quality standards.
 
