@@ -45,16 +45,32 @@ footer .hx-flex {
 
 footer .hextra-custom-footer {
     width: 100%;
+    flex-direction: row;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
 }
 
 footer .column-1 {
-    float: left;
-    width: 50%;
     color: var(--text-color);
     a {
         color: var(--text-color);
         text-decoration: underline;
     }
+}
+
+footer .column-2 {
+    text-align: right;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 100%;
+}
+
+footer .hextra {
+    margin-top: 1em;
 }
 
 body {
