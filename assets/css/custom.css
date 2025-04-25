@@ -43,7 +43,13 @@ footer .hx-flex {
     align-items: end;
 }
 
+.spacer {
+    min-height: 1em;
+    flex-grow: 1;
+}
+
 footer .hextra-custom-footer {
+    align-self: flex-end;
     flex-direction: row;
     display: flex;
     align-items: flex-end;
@@ -90,6 +96,9 @@ footer .hextra {
 
 body {
     font-family: var(--text-font);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h1, h2, h3 {
