@@ -44,7 +44,7 @@ footer .hx-flex {
 }
 
 .spacer {
-    min-height: 1em;
+    min-height: 6em;
     flex-grow: 1;
 }
 
