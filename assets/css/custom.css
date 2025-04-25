@@ -36,7 +36,7 @@
 
 .hextra-footer {
     background: var(--omsf-primary);
-    padding: 1em 1em;
+    /*padding: 1em 1em;*/
 }
 
 footer .hx-flex {
@@ -44,11 +44,12 @@ footer .hx-flex {
 }
 
 footer .hextra-custom-footer {
-    width: 100%;
     flex-direction: row;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 footer .column-1 {
@@ -68,6 +69,20 @@ footer .column-2 {
     justify-content: space-between;
     height: 100%;
 }
+
+@media screen and (max-width: 768px) {
+    footer .hextra-custom-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    footer .column-2 {
+        margin-top: 1em;
+        text-align: left;
+        align-items: flex-start;
+    }
+}
+
 
 footer .hextra {
     margin-top: 1em;
@@ -91,6 +106,8 @@ h2 {
 
 article {
     padding-left: 1em;
+    width: 100%;
+    max-width: 900px;
 }
 
 .content ul {
