@@ -132,6 +132,11 @@ nav .menu-container {
     margin-left: 2em;
 }
 
+.logo-container img {
+    width: 80%;
+    height: 80%;
+}
+
 .header-logo {
     margin: 2.75ch 0 0.5ch 2.75ch;
     text-align: center;

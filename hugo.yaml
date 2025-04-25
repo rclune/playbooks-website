@@ -56,8 +56,6 @@ params:
     displayTitle: false
     logo:
       path: images/logo-black.svg
-      height: "80%"
-      width: "80%"
   footer:
     displayPoweredBy: false
   theme:
