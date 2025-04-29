@@ -1,6 +1,6 @@
 ---
 title: Contributions Playbook
-weight: 1
+weight: 2
 layout: playbook
 ---
 

@@ -6,6 +6,8 @@
     --omsf-tertiary-blue: #64a1b2;
     --omsf-tertiary-pink: #f1cae0;
     --omsf-tertiary-green: #a6d382;
+    --agathe-background: #f6f6f6;
+    --agathe-background-dark: #faf9f5;
     --agathe-primary-fade: #ebfaf7;
     --agathe-wrapper: #e4fff6;
     --agathe-dark: #62978d;
@@ -34,10 +36,69 @@
 
 .hextra-footer {
     background: var(--omsf-primary);
+    /*padding: 1em 1em;*/
+}
+
+footer .hx-flex {
+    align-items: end;
+}
+
+.spacer {
+    min-height: 6em;
+    flex-grow: 1;
+}
+
+footer .hextra-custom-footer {
+    align-self: flex-end;
+    flex-direction: row;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer .column-1 {
+    color: var(--text-color);
+    a {
+        color: var(--text-color);
+        text-decoration: underline;
+    }
+}
+
+footer .column-2 {
+    text-align: right;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    footer .hextra-custom-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    footer .column-2 {
+        margin-top: 1em;
+        text-align: left;
+        align-items: flex-start;
+    }
+}
+
+
+footer .hextra {
+    margin-top: 1em;
 }
 
 body {
     font-family: var(--text-font);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h1, h2, h3 {
@@ -54,6 +115,8 @@ h2 {
 
 article {
     padding-left: 1em;
+    width: 100%;
+    max-width: 900px;
 }
 
 .content ul {
@@ -64,8 +127,118 @@ article {
     margin-left: 2rem;
 }
 
+nav .menu-container {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-items li {
+    display: block;
+}
+
+.logo-container {
+    align-items: flex-end;
+    margin-left: 2em;
+}
+
+.logo-container img {
+    width: 80%;
+    height: 80%;
+}
+
+.header-logo {
+    margin: 2.75ch 0 0.5ch 2.75ch;
+    text-align: center;
+}
+
+.hx-mr-2 {
+    /* turn of hextra's margin, because we don't have text */
+    margin-right: 0;
+}
+
 .nav-container {
-    border-top: 10px solid var(--omsf-primary);
+    font-size: 1.2375rem;
+    border-top: 20px solid var(--omsf-primary);
+    border-bottom: 2px solid gray;
+}
+
+nav.topnav {
+    display: flex
+    position: sticky;
+    top: 0px;
+    align-items: flex-end;
+    z-index: 1000;
+}
+
+nav ul.menu-container {
+  list-style: none;
+  overflow: visible;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul.menu-container li {
+  /*text-align: right;*/
+  /*margin-left: 5%;*/
+}
+
+nav ul.menu-container li a {
+  text-decoration: none;
+  font-size: 1.2375rem;
+}
+
+nav ul.menu-container li.menu-has-children:hover {
+  background-color: var(--agathe-primary-fade);
+}
+
+nav ul.menu-container .menu-items a:hover {
+    background-color: white;
+    color: var(--agathe-dark);
+}
+
+nav .playbook-menu {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+li.menu-has-children a.playbook-menu:after {
+    content: "\0023F7";
+    padding-left: 15px;
+    color: var(--agathe-dark);
+}
+
+.menu-items {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 100;
+    background-color: white;
+    border-top: 4px solid var(--omsf-primary);
+}
+
+.menu-items a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid grey;
+    work-break: keep-all;
+}
+
+li.menu-has-children:hover .menu-items {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    li.menu-has-children {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    span.header-playbook-label {
+        display: none;
+    }
 }
 
 .sidebar-container {
@@ -197,7 +370,7 @@ article {
 }
 
 .playbook-card:hover {
-    box-shadow: 0 8px 16px 0 #b5f2e1;
+    box-shadow: 0 0 16px 4px #b5f2e1;
 }
 
 @media screen and (max-width: 768px) {

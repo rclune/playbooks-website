@@ -48,6 +48,16 @@ menu:
         type: search
 
 params:
+  editURL:
+    enable: true
+    base: "https://github.com/omsf/playbooks-website/tree/main/content"
+    contributing: "https://github.com/omsf/playbooks-website/tree/main/CONTRIBUTING.md"
+  navbar:
+    displayTitle: false
+    logo:
+      path: images/logo-black.svg
+  footer:
+    displayPoweredBy: false
   theme:
     default: light
     displayToggle: false

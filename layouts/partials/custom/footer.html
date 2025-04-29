@@ -1,0 +1,45 @@
+<div class="column-1">
+  <img src="/images/logo-black.svg" id="logo-footer" />
+  Unless otherwise noted, all content is licensed under the
+  <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY
+4.0 license.</a>
+</div>
+<div class="column-2">
+  <!-- link to GitHub (we "see" instead of "edit") -->
+  <div class="contributing">
+  {{- with .context -}}
+   {{- $contributing := site.Params.editURL.contributing -}}
+   {{/* took this straight from hextra's toc.html */}}
+   {{- $editURL := site.Params.editURL.base | default "" -}}
+   {{- with .Params.editURL -}}
+      {{/* if `editURL` is set in the front matter */}}
+      {{- $editURL = . -}}
+    {{- else -}}
+      {{- with .File -}}
+        {{/* `.FileInfo.Meta.SourceRoot` is a Hugo internal field, e.g. `/path/to/repo/content/en/` */}}
+        {{- $sourceDir := replace (strings.TrimPrefix .FileInfo.Meta.BaseDir .FileInfo.Meta.SourceRoot) "\\" "/" -}}
+        {{- $sourceDir = strings.TrimPrefix "/content" $sourceDir -}}
+        {{- $path := replace .Path "\\" "/" -}}
+        {{- $editURL = urls.JoinPath $editURL $sourceDir $path -}}
+      {{- end -}}
+    {{- end -}}
+    <a href="{{ $contributing }}" target="_blank" rel="noreferrer">Contribute to the playbooks!</a>
+    <br/>
+    {{/* hide the GitHub link for index page */}}
+    <a href="{{ $editURL }}" target="_blank" rel="noreferrer"
+       {{- if not .Parent -}}style="visibility:hidden;"{{- end -}}>See this page on GitHub</a>
+  {{- end -}}
+  </div>
+
+  <!-- hextra credit -->
+  <div class="hextra">
+  {{/* taken from hextra's footer.html */}}
+  <a class="hx-flex hx-text-sm hx-items-center hx-gap-1 hx-text-current" target="_blank" rel="noopener noreferrer" title="Hextra GitHub Homepage" href="https://github.com/imfing/hextra">
+    <span>
+        Powered by Hextra
+        {{- partial "utils/icon.html" (dict "name" "hextra" "attributes" `height=1em class="hx-inline-block ltr:hx-ml-1 rtl:hx-mr-1 hx-align-[-2.5px]"`) -}}
+    </span>
+  </a>
+  </div>
+
+</div>
