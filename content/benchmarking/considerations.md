@@ -67,7 +67,7 @@ Scientific benchmark sets and benchmarking tests should follow high standards, i
 **Documentation:** Documentation should include not only instructions for running benchmarks and interpreting results, but reference to publications that report results for comparison and explanation of the relevant methods
 
 **Cutoffs to define pass/fail criteria:** cutoffs to define pass/fail criteria are important to allow automatic evaluation of the scientific benchmark. Say, if a benchmark is running automatically, one can encode a failure criteria that triggers a response, such as informing the maintainer that this particular test failed and needs to be looked into \- at least to understand why the failure occurred. One possible way to define a failure criterion is to run the test three times, and add a percentage (like 10-20%) to the main metric that is being tracked for each benchmarking test case. F.ex. below is part of the protein-protein docking benchmark where each plot represents a different protein, the metrics are interface score vs. interface RMSD and each dot in the plots represents a model created. The blue vertical line below represents the cutoff for each protein.  
-![image1](https://drive.google.com/file/d/1JScIoycSZNZdiDbVzVANw4VGdKlJhadi/view?usp=sharing)
+![image1](https://drive.google.com/uc?export=view&id=1VVQg64XwAl4hIY3AKAvmWQned)
 
 ### Lowest barriers to contributions 
 
