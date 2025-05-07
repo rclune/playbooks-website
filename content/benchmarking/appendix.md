@@ -1,6 +1,6 @@
 ---
 layout: section
-title: Appendix: Role of AI in benchmarking
+title: "Appendix: Role of AI in benchmarking"
 weight: 10
 sidebar:
   order: 10
