@@ -1,6 +1,6 @@
 ---
 layout: section
-title: Implementations?
+title: Implementations
 weight: 6
 sidebar:
   order: 6
@@ -54,7 +54,7 @@ sidebar:
 * Design framework  
   * Recommendation: the following framework has been shown to be useful in fulfilling the above goals and over 40 scientific benchmarks were implemented based on that (Fig 1 in REF 7\)
 
-![image](https://drive.google.com/uc?export=view&id=1PrziBz0FmvOgCCJsIBKYpJ8x_kq4pMmy)
+![image](/images/benchmarking-framework.png)
 
 * Implement framework  
   * Choose a widely used language, setup, and software in your field  
