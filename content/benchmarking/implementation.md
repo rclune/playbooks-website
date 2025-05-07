@@ -54,7 +54,7 @@ sidebar:
 * Design framework  
   * Recommendation: the following framework has been shown to be useful in fulfilling the above goals and over 40 scientific benchmarks were implemented based on that (Fig 1 in REF 7\)
 
-![image](/images/benchmarking-framework.yml)
+![image](/images/benchmarking-framework.png)
 
 * Implement framework  
   * Choose a widely used language, setup, and software in your field  
