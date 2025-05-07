@@ -1,6 +1,6 @@
 name: Build from PR
 
-on: 
+on:
   pull_request:
     branches:
       - main
@@ -11,7 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          submodules: 'recursive'
+          submodules: "recursive"
+          lfs: "true"
 
       - name: Build site
         uses: omsf/static-site-tools/build/hugo@main
