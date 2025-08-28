@@ -34,8 +34,8 @@ menu:
         teaser: >
           Discover our recommendations for developing benchmarks.
 
-    - name: Projects
-      pageRef: /projects
+    - name: Project
+      pageRef: /project
       weight: 3
       params:
         type: playbook
