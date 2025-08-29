@@ -36,7 +36,7 @@ OMSF consortium-funded projects use a two-stage governance structure that reflec
 * All supporting members get a seat at the advisory board
 * Members elect representatives to the governing board, with higher support tiers receiving greater representation
 
-#### Decision making in the advisory board / governing board model:
+#### Decision making in the advisory board / governing board model
  The governing board also provides budget and high-level operational oversight. 
 The leadership team operationalizes all decisions, converts them into roadmaps and deliverables, and provides regular reports to the boards. 
 Examples of decision-making bodies and roles at OMSF:

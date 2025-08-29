@@ -70,3 +70,15 @@ When defining the roles that will make up your project team, it is important to 
 
 The most important consideration when hiring is not the individual skills being added to the team, but the overall impact on team health. A team member's ability to come to agreement on what problems need to be solved is far more important than their ability to solve the hardest problems. Just as importantly, a highly productive individual contributor who destroys the harmony of the team with a rude or belittling attitude is a net negative to the team's productivity.
 
+## Product Management
+Product Management 
+Where Project Management is concerned with advancing the state of the project as the voice of the project, adding new frameworks and products, Product Management is concerned as the voice of the product; with maintaining stability of existing software products, fixing bugs, and delivering new features and user experiences. These two processes are complementary and share some strategies, but require a different mindset. Product Management includes the following concerns:
+* *Feature development:* Adding new features to an existing software product to meet new needs of existing users or appeal to a broader user base
+* *Maintenance:* Bug fixing, dependency updates, performance improvements
+* *Testing:* 
+  * Continuous integration testing to identify when a change to the code introduce bugs into existing features or when dependency updates introduce bugs
+  * *Benchmarking* (See [Benchmarking Playbook](/benchmarking/))
+* *Documentation* (See [Documentation Playbook], coming soon!)
+* User support: Collect support requests in a central location and assign them to team members for response. Our projects use automation to connect an email inbox to other productivity tools, like Slack or [Github](https://github.com/dwhswenson/ticgithub). 
+
+In our projects, Product Management responsibilities are mostly devolved to individual [Drivers](../governance/#consortium-governance-example-the-advisory-board--governing-board-model)
