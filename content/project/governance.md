@@ -7,13 +7,13 @@ sidebar:
 ---
 Every project needs governance, though governance structures can range from informal to very formal. OMSF requires that hosted projects have defined governance. More philosophically, every project has governance: plans are formed, decisions are made, actions are taken, software is developed. Governance is the answer to the questions of “how” decisions are made and “who” makes them.
 
-### Why should you care about project governance? 
+## Why should you care about project governance? 
 
 Successful project execution requires effective leadership and clarity around roles and responsibilities. Establishing the oversight structure, decision making processes and delegation mechanisms are the key objectives of any governance model. The governance model is usually described in the project bylaws (or charter) as a part of the fiscal sponsorship agreements, while operational procedures are managed through organizational and project-specific policies.
 
 The decision process should include a shared understanding of which decisions must be made by formal governance and which are delegated to operational leadership. Bylaws and policies create the shared understanding of “how we do things” and “who has which rights and responsibilities”.
 
-### The Three Functions of Governance
+## The Three Functions of Governance
 * Setting strategy
   * Who do we serve and how?
   * What vision do we adopt?
@@ -29,14 +29,14 @@ The decision process should include a shared understanding of which decisions mu
 
 The three functions of governance can be fulfilled by a single person, but in OMSF projects they are usually fulfilled by a board. The board should consist of a group of people with aligned but distinct interests operating under the agreement of the bylaws.
 
-## Consortium Governance Example: The advisory board / governing board model.
+### Consortium Governance Example: The advisory board / governing board model.
 
 OMSF consortium-funded projects use a two-stage governance structure that reflects the differing monetary contributions of partners.
 * Three tiers of support are defined by annual contribution
 * All supporting members get a seat at the advisory board
 * Members elect representatives to the governing board, with higher support tiers receiving greater representation
 
-# Decision making in the advisory board / governing board model:
+#### Decision making in the advisory board / governing board model:
  The governing board also provides budget and high-level operational oversight. 
 The leadership team operationalizes all decisions, converts them into roadmaps and deliverables, and provides regular reports to the boards. 
 Examples of decision-making bodies and roles at OMSF:

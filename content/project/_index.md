@@ -4,13 +4,13 @@ weight: 4
 layout: playbook
 ---
 
-## Value Statement
+### Value Statement
 The OMSF seeks to support open source software projects in molecular sciences in becoming sustainable, driven by both the academic community and the industrial user base. The field of molecular science software poses unique challenges; many such projects involve a diverse group of stakeholders, and usually cross boundaries between scientific research, systems programming, application programming, and user support. We aim to provide guidance on how such a project can be structured, planned, and managed to provide a foundation for sustainability.
 
-## Audience 
+### Audience 
 This document is intended for project managers or other operational leaders of new projects that are planning to launch within OMSF, or of existing software projects that are considering seeking fiscal sponsorship from OMSF.
 
-### Introduction
+## Introduction
 Launching a new software project in the molecular sciences is daunting. The very nature of the field demands both expert knowledge of interdisciplinary scientific subjects and high-level software engineering expertise. At the same time, the software has the potential for enormous impact, both academic and economic. The OMSF exists to bridge the gap between academic researchers and industrial users: The researchers have the cutting-edge science, the industry users have the research needs, means and incentive to fund the development, and we bring the vision and know-how to run such a complex project.
 
 The most challenging problems to be solved in scientific software development are not technical problems, but social problems. Technical problems can be solved by a graduate student as part of their dissertation, but building useful software for wide adoption requires understanding the needs of users and negotiating with developers of other packages in the software ecosystem. Navigating a complex set of compromises between usability, accuracy, robustness, and performance to meet the needs of a wide user base requires trust: trust between the users and the project staff, trust between the developers and the project manager. Trust forms the foundation for the entire project.
