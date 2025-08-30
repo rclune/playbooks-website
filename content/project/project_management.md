@@ -82,7 +82,7 @@ Product Management includes the following concerns:
 * *Documentation* (See [Documentation Playbook], coming soon!)
 * User support: Collect support requests in a central location and assign them to team members for response. Our projects use automation to connect an email inbox to other productivity tools, like Slack or [Github](https://github.com/dwhswenson/ticgithub). 
 
-### Project Management Software Platforms
+## Project Management Software Platforms
 
 Effective project management requires several software tools to record, organize and coordinate knowledge and work. 
 
@@ -94,7 +94,12 @@ When choosing a tool or platform, ask these questions:
 
 Here are some of the functions that our projects have found critical, along with our experiences using different platforms.
 
-#### Knowledge Base
+### Code and Data Repositories
+Data and code must be publicly accessible. All current OMSF projects host their code on Github. Though are alternative code repositories, they have very little uptake in scientific software development, so our projects are where our community can be found.
+
+OMSF projects make use of Zenodo for data storage. Zenodo provides a flexible system for storing and accessing virtually unlimited amounts of data, including assigning a doi to every record. Each project should create a [community on Zenodo](https://zenodo.org/communities). A Community provides tools for collecting and curating items produced as part of the same project. You can the publish datasets, talk slides, and even [software releases]( https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) to Zenodo.
+
+### Knowledge Base
 Your project will generate lots of knowledge, plans and decisions, which should be written down in a place readily accessible to everyone involved in the project. Projects thrive on comprehensive communication, especially in remote organizations like OMSF. Additionally, knowledge must be stored to maintain a level of sustainability as projects scale - new members need a place to discover, and old members need a place to reference. This knowledge base should be able to store and catalogue: 
 * Meeting notes
 * Project plans
@@ -106,7 +111,7 @@ There are a number of proprietary solutions that allow for storage and organizat
 * Notion: A lighter-weight knowledge base platform than Confluence, with similar use cases.
  In addition, open source alternatives exist, ranging from wikis to full-featured knowledge base systems, but currently no OMSF project has experience with such a platform.
  
-#### Tracker
+### Tracker
 Many of the responsibilities of project management described above require the team, and especially the PM, to have a comprehensive overview of the work being done. Projects thrive on comprehensive communication. While a knowledge base provides a long term, general understanding of a project, Trackers provide real-time information to members of a project team, giving context and clarity to day-to-day project tasks. A useful tracker should fit your individual projects needs, but all trackers should:
 * Manage priorities
 * Coordinate interdependent development efforts
@@ -118,7 +123,7 @@ Sometimes, a spreadsheet is not enough. There are a number of platforms that bal
 * *Jira:* Useful for comprehensive management of large projects. Doesn't integrate well with Github.
 * *Zenhub:* Project management layer on top of Github, for reduced friction between development and project management. Scales to complex projects better than native Github features, but is still pushed to the limits by our larger projects.
 
-#### Communications
+### Communications
 Projects need a platform for internal communications between team members, as well as range of different channels for communicating with different stakeholers (see [Project Community](../project_community/#community-engagement/)). Remember, projects thrive on comprehensive communication. It is vital that projects not only have the ability to reach out to peers and close stakeholders, but that team members feel comfortable enough with the tools to do so. Whatever platform you choose, it should
 * Facilitate asynchronous communication
 * Keep written records of staff communication
@@ -134,8 +139,45 @@ Communication platforms are usually chosen based on cultural norms -- again, it'
 
 OMSF projects also use Gmail for private, formal correspondence, including some engagement with industry partners.
 
-### Evaluation and Metrics
+## Evaluation and Metrics
 Simply put, metrics are measurable changes over time. More often than not, these are quantitative measurements that represent the state of a project. Metrics are almost never useful as individual points - they require a baseline and some time to determine health. Measuring Open Source Software is a hard problem, and OMSF projects have not settled on any specific set of metrics to track. We have considered
 * *Github statistics:* These primarily reflect the actions of the developer team, except in very widely used, mature projects.
 * *Package downloads:* Difficult to distinguish users from automated downloads in Continuous Integration pipelines.
 * *Citations:* Nonexistent for young projects. Difficult to normalize for mature projects, as software tools may be described in a number of publications, making it unclear which papers' citations should be included.
+
+## Publishing Scientific Papers
+If your software project is successful, it will lead to new, publication-worthy science. Publishing a scientific paper is a much different kind of task than software development, and requires different expertise and considerations. The following is adapted from [Open Force Field's writing process and stages](https://docs.google.com/document/d/1tvkGiP5N_T2v7iH_Y1R69V-pXJUnTS8RqEnwf_TG-wM/edit?usp=sharing)
+
+### Prepare a Manuscript
+Assign a *lead author* and a *lead PI*. The *lead author* is responsible for:
+* providing drafts,
+* coordinating feedback (give deadlines!)
+* ensuring editing is done in a manner which does not result in irreconcilable editing clashes (e.g. multiple authors editing simultaneously in a way where they are making opposite edits simultaneously)
+The *lead PI* is responsible for 
+* supporting the lead author 
+* ensuring that papers progress through stages in a timely manner. 
+If an author does not provide feedback when required, the *lead PI* (or their delegate) should take responsibility to give that author appropriate options, such as (a) drop off of the paper, or (b) agree to let it proceed without providing review at that stage. 
+The choice of option (b) affects later stages – for example, a collaborator who declines to provide feedback on a rough draft should not then request major restructuring at a later stage.
+
+The lead author and PI will set the timeline for feedback for each stage of the process. 
+* Usually 1-2 weeks is reasonable for comments, but extensions may be granted for individuals on a case-by-case basis, such as (for example) if someone is traveling. 
+* However, if the work is funded by Consortium, a draft must be provided to the partners for comment for 30 days (or up to 45 days if they need and request more time) before preprinting and submission. This review (per the CRA) is to ensure appropriate credit is given, and can serve to strengthen the work, but does not give partners veto power. 
+* The lead PI should request the review from partners. 
+* Partners will check the box associated with their name in the provided spreadsheet for each manuscript. 
+* Partners should also be informed that a failure to provide comments will be assumed to mean they approve.
+#### Resources 
+* [Manuscript review tracker](https://docs.google.com/spreadsheets/d/1YyIIzeM7YHPDUJCpbu8gTNHsjW9yQB1bxIPMLdmhU6E/edit?gid=1971558079#gid=1971558079)
+* [Ten simple rules for collaboratively writing a multi-authored paper](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006508)
+
+### Attribute Authorship
+We recommend using the [Contributor Role Taxonomy (CRediT)](https://credit.niso.org/) framework for attributing authorship. For each publication, prepare a chart where individuals will be able to put their or someone else’s name next to the appropriate CRediT category. (See [example](https://docs.google.com/spreadsheets/d/12UgwPGjWFXqsBm5FTW59SKUUw4PzSHvvA79aSItOog8/edit?gid=0#gid=0)) The list of contributors with short contribution descriptions should be published on the website and on Zenodo record for the given record.
+
+### Publish!
+OMSF projects usually publish manuscripts to a preprint server, such as 
+* [Arxiv](https://arxiv.org/)
+* [Chemrxiv](https://chemrxiv.org/)
+* [Biorxiv](https://www.biorxiv.org/)
+
+Once a manuscript is available as a preprint, be sure to [share it on social media!](../project_community/#community-engagement/) Figures should be published on Zenodo under a CC-BY license.
+
+The [Journal of Open Source Software](https://joss.theoj.org/) is often an appropriate venue for a relatively brief software publication, which can serve as a reference for subsequent data-driven papers in discipline-specific journals.
