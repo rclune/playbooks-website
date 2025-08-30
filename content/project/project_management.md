@@ -71,8 +71,9 @@ When defining the roles that will make up your project team, it is important to 
 The most important consideration when hiring is not the individual skills being added to the team, but the overall impact on team health. A team member's ability to come to agreement on what problems need to be solved is far more important than their ability to solve the hardest problems. Just as importantly, a highly productive individual contributor who destroys the harmony of the team with a rude or belittling attitude is a net negative to the team's productivity.
 
 ## Product Management
-Product Management 
-Where Project Management is concerned with advancing the state of the project as the voice of the project, adding new frameworks and products, Product Management is concerned as the voice of the product; with maintaining stability of existing software products, fixing bugs, and delivering new features and user experiences. These two processes are complementary and share some strategies, but require a different mindset. Product Management includes the following concerns:
+Where Project Management is concerned with advancing the state of the project as the voice of the project, adding new frameworks and products, Product Management is concerned as the voice of the product; with maintaining stability of existing software products, fixing bugs, and delivering new features and user experiences. These two processes are complementary and share some strategies, but require a different mindset. In our projects, Product Management responsibilities are mostly devolved to individual [Drivers](../governance/#consortium-governance-example-the-advisory-board--governing-board-model)
+
+Product Management includes the following concerns:
 * *Feature development:* Adding new features to an existing software product to meet new needs of existing users or appeal to a broader user base
 * *Maintenance:* Bug fixing, dependency updates, performance improvements
 * *Testing:* 
@@ -81,4 +82,60 @@ Where Project Management is concerned with advancing the state of the project as
 * *Documentation* (See [Documentation Playbook], coming soon!)
 * User support: Collect support requests in a central location and assign them to team members for response. Our projects use automation to connect an email inbox to other productivity tools, like Slack or [Github](https://github.com/dwhswenson/ticgithub). 
 
-In our projects, Product Management responsibilities are mostly devolved to individual [Drivers](../governance/#consortium-governance-example-the-advisory-board--governing-board-model)
+### Project Management Software Platforms
+
+Effective project management requires several software tools to record, organize and coordinate knowledge and work. 
+
+When choosing a tool or platform, ask these questions:
+* Is it easy to use?
+* Does it meet your specific need?
+* Does it integrate with tools you already use?
+* How much extra work will it take to implement and adopt this new tool?
+
+Here are some of the functions that our projects have found critical, along with our experiences using different platforms.
+
+#### Knowledge Base
+Your project will generate lots of knowledge, plans and decisions, which should be written down in a place readily accessible to everyone involved in the project. Projects thrive on comprehensive communication, especially in remote organizations like OMSF. Additionally, knowledge must be stored to maintain a level of sustainability as projects scale - new members need a place to discover, and old members need a place to reference. This knowledge base should be able to store and catalogue: 
+* Meeting notes
+* Project plans
+* Organizational decisions
+
+There are a number of proprietary solutions that allow for storage and organization of knowledge. OMSF projects have experience with 
+* *Google Drive:* Useful for a wide range of file types, sharing with external collaborators. Difficult to organize or search, if used as the primary knowledge base it requires a lot of work to make documents discoverable (e.g. making Tabler of Contents files)
+* Confluence: A powerful knowledge base with many built-in templates and automations. Very customizable, but requires a lot of commitment to use well.
+* Notion: A lighter-weight knowledge base platform than Confluence, with similar use cases.
+ In addition, open source alternatives exist, ranging from wikis to full-featured knowledge base systems, but currently no OMSF project has experience with such a platform.
+ 
+#### Tracker
+Many of the responsibilities of project management described above require the team, and especially the PM, to have a comprehensive overview of the work being done. Projects thrive on comprehensive communication. While a knowledge base provides a long term, general understanding of a project, Trackers provide real-time information to members of a project team, giving context and clarity to day-to-day project tasks. A useful tracker should fit your individual projects needs, but all trackers should:
+* Manage priorities
+* Coordinate interdependent development efforts
+* Give PM insight into the work to provide support to the team
+
+Sometimes, a spreadsheet is not enough. There are a number of platforms that balance functionality and complexity -- the more things the platform can do, the steeper the learning curve and the more friction it can introduce into the team's workflow. OMSF projects have tried
+* *Native Github features:* useful for small projects. Github has recently added features for coordinating work between different repositories or subprojects, but they don't scale well to the complexity of our larger projects that involve several team members working across many repos.
+* *Trello:* Useful for small teams. Limited functionality.
+* *Jira:* Useful for comprehensive management of large projects. Doesn't integrate well with Github.
+* *Zenhub:* Project management layer on top of Github, for reduced friction between development and project management. Scales to complex projects better than native Github features, but is still pushed to the limits by our larger projects.
+
+#### Communications
+Projects need a platform for internal communications between team members, as well as range of different channels for communicating with different stakeholers (see [Project Community](../project_community/#community-engagement/)). Remember, projects thrive on comprehensive communication. It is vital that projects not only have the ability to reach out to peers and close stakeholders, but that team members feel comfortable enough with the tools to do so. Whatever platform you choose, it should
+* Facilitate asynchronous communication
+* Keep written records of staff communication
+* Organize communication records for easier recovery
+
+Communication platforms are usually chosen based on cultural norms -- again, it's important that team members feel comfortable communicating on the platform. OMSF project primarily use Slack, with some common norms:
+* Public channels for engaging with stakeholders
+* Private channels for high-volume staff communication
+* One Channel for each subproject / deliverable
+* One Channel for each group of stakeholders
+* One Channel for each software product
+* Use group DMs sparingly - named channels allow more flexibility
+
+OMSF projects also use Gmail for private, formal correspondence, including some engagement with industry partners.
+
+### Evaluation and Metrics
+Simply put, metrics are measurable changes over time. More often than not, these are quantitative measurements that represent the state of a project. Metrics are almost never useful as individual points - they require a baseline and some time to determine health. Measuring Open Source Software is a hard problem, and OMSF projects have not settled on any specific set of metrics to track. We have considered
+* *Github statistics:* These primarily reflect the actions of the developer team, except in very widely used, mature projects.
+* *Package downloads:* Difficult to distinguish users from automated downloads in Continuous Integration pipelines.
+* *Citations:* Nonexistent for young projects. Difficult to normalize for mature projects, as software tools may be described in a number of publications, making it unclear which papers' citations should be included.
