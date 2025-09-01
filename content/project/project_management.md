@@ -5,19 +5,21 @@ weight: 3
 sidebar:
   order: 3
 ---
-
 Translating projects’ vision and mission is never easy, and execution paths will depend on many things, including available resources, environment, and even personalities of people involved in the execution.At OMSF, we came to rely on Project Managers to assist with the project execution. The PM takes the vision laid out by project leadership and enacts it. While it may seem that a PM does not need to be an expert in either the scientific field or in software engineering, we found that  having knowledge and skill in the area is immensely helpful. The most important skills for a PM are prioritization and delegation, but putting these skills into practice requires a deep intuition for the nature of the problem being solved. This intuition comes from domain context, as do awareness of the skills and limitations of the other members of the team. The PM must be able to hold onto the vision of the project and keep it in sight of the rest of the team, helping them resist distraction and prevent scope creep. For projects that have to manage lots of ideas and potential solutions, this strict focus is an uphill battle. The PM should also be comfortable thinking in possibilities, to make strategic decisions that consider both the present reality of the project and multiple potential futures.
 
 ## Following the roadmap
+
 The [annual roadmap]() serves as the definitive guide to the desires of the governing body and the tactical plan for the project. Following the roadmap means delivering the approved objectives, but in practice it usually means *not* delivering non-approved features. It also means assigning a sequence, or order of completion, to the objectives on the roadmap.
 
 ### Delivering subprojects
+
 The annual roadmap should be divided into a set of distinct features or deliverables that can be planned separately and worked on independently. We sometimes call these discrete efforts "subprojects." Dividing the project into subprojects provides a framework for planning work, managing scope, setting priorities, estimating effort, and assigning work. 
 
-#### Tips for Success
+#### Tips for success
+
 * Map out dependencies between subprojects to adjust priority and set sequence. Subprojects that must be completed before other subprojects are called "bottlenecks" or "blockers."
 * Set a delivery date for each project based on priority (higher priority things first), dependencies (bottlenecks first), and effort estimate (larger things first).
-* Assign a Driver to each subproject based on the skills required, interests and preferences, and balance of workload.
+* Assign a [Driver](../governance/#consortium-governance-example-the-advisory-board--governing-board-model) to each subproject based on the skills required, interests and preferences, and balance of workload. 
 * Also identify which other team members will contribute
 * Estimate the length of calendar time required to complete the subproject, considering all other work assigned to the responsible team members
 * Schedule work on a Quarterly basis
@@ -28,7 +30,7 @@ In software development, the temptation to add *just one more feature* before th
 
 The Driver assigned to a particular subproject is usually tasked with proposing ("scoping") the list of features to be included in the subproject. The project leadership considers the proposed scope in the context of the entire roadmap and the estimated effort required, and approves it with any necessary changes. Any changes to the scope, once the subproject is underway, must also be approved by leadership.
 
-### Defining Scope
+### Defining scope
 
 There are a few different frameworks for defining scope, from simplest to must complex:
 * Minimum Viable Product (MVP): An important concept in Agile software development, the MVP is the smallest set of features or capabilities that can be given to users. In this framework, no additional features are included until required based on user feedback.
@@ -37,17 +39,17 @@ There are a few different frameworks for defining scope, from simplest to must c
 
 ### Estimating effort
 
-To plan follow the roadmap, the project manager must make some estimate of the amount of effort required to deliver each subproject. All effort estimates are wrong, but some are more useful than others. The two useful techniques that we have used in OMSF projects are
+To follow the roadmap, the project manager must make some estimate of the amount of effort required to deliver each subproject. All effort estimates are wrong, but some are more useful than others. The two useful techniques that we have used in OMSF projects are
 * T-shirt sizes: Most work tasks are defined as Small, Medium, or Large, where the amount of work that these sizes map onto are completely context-dependent (as with T-shirts). If necessary, work items can also be estimated as X-Small or X-Large (as with T-shirts).
 * Story points: An arbitrary unit of developer time used to measure how complex a task is. We usually approximate one story point as 30 minutes of developer effort, but it is important not to overestimate the precision of story points. Assigning powers of 2 or Fibbonacci numbers can give a reasonable approximation of the precision of story points.
 
-## Defining and Building a Developer Team
+## Defining and building a developer team
 
 Developing molecular software requires expert skill in both science and software engineering, and recruiting these double-experts is a fundamental challenge in our field, particularly because they can often command high wages in industry. Developers with these skills are usually graduates of PhD programs in computational chemistry or physics. The archetypal molecular sciences software developer is a recent PhD who found themselves more interested in writing production-quality code than in publishing in Nature. In our experience, it is much less common to find graduates of Computer Science programs who have learned molecular sciences outside the classroom. 
 
 In scientific software development, as in other knowledge work, virtually all management boils down to Human Resource Management. The success of your project depends entirely on the performance of your team. The skills required to do this work come mostly from PhD-level training, so they necessarily come along with independence, creativity, and persistence. Scientific developers need to be given aagency and respect to do their best work, and these depend on factors that have traditionally been relegated to HR. The conventional HR functions of defining and filling positions, setting fair compensation and benefits, promoting "work-life balance," and resolving disputes (especially with managers) are essential to the performance of the team. Get these things right, and your team can't help but succeed. In short, if you take care of your people, then your people will take care of the work.
 
-### Roles and Responsibilities
+### Roles and responsibilities
 
 OMSF projects are typically built by small teams of experts. Each person on the team may have to "wear multiple hats," performing a mix of scientific and engineering tasks. We use two distinct job titles and descriptions ("Software Scientist" and "Research Software Engineer" to help define responsibilities and identify candidates, but in reality, each individual role can be thought of on a sliding scale between Science and Engineering. The exact position of that slider may be set by the particular skills and interests of the person in the role, but it may also shift over time, or even day-to-day, based on the work that needs to be done in the project. 
 
@@ -64,13 +66,14 @@ Following the division of RSEs into Software Engineers and Software Scientists, 
 * *Science Lead:* Supervises Software Scientists. Responsible for designing and conducting any relevant experiments, ensuring scientific accuracy and applicability of code, publishing any scientific papers that come out of the project
 * *Infrastructure Lead:* Supervises Research Software Engineers. Responsible for designing software architecture, ensuring performance and stability of the code base, and leading testing and documentation efforts.
 
-### Hiring Strategy
+### Hiring strategy
 
 When defining the roles that will make up your project team, it is important to write realistic job descriptions that match real candidates. Accurate, realistic, detailed job description will allow candidates to self-select roles that will best match their own skills and interests. Job descriptions that are too ambitious may select for candidates with over-inflated views of their own abilities. There are no superhero software developers, or if there are, a non-profit budget can't afford them. Selecting a candidate who is both an accomplished scientist and a skilled software engineer likely means choosing someone with poor teamwork or other important weaknesses.
 
 The most important consideration when hiring is not the individual skills being added to the team, but the overall impact on team health. A team member's ability to come to agreement on what problems need to be solved is far more important than their ability to solve the hardest problems. Just as importantly, a highly productive individual contributor who destroys the harmony of the team with a rude or belittling attitude is a net negative to the team's productivity.
 
-## Product Management
+## Product management
+
 Where Project Management is concerned with advancing the state of the project as the voice of the project, adding new frameworks and products, Product Management is concerned as the voice of the product; with maintaining stability of existing software products, fixing bugs, and delivering new features and user experiences. These two processes are complementary and share some strategies, but require a different mindset. In our projects, Product Management responsibilities are mostly devolved to individual [Drivers](../governance/#consortium-governance-example-the-advisory-board--governing-board-model)
 
 Product Management includes the following concerns:
@@ -82,7 +85,7 @@ Product Management includes the following concerns:
 * *Documentation* (See [Documentation Playbook], coming soon!)
 * User support: Collect support requests in a central location and assign them to team members for response. Our projects use automation to connect an email inbox to other productivity tools, like Slack or [Github](https://github.com/dwhswenson/ticgithub). 
 
-## Project Management Software Platforms
+## Project management software platforms
 
 Effective project management requires several software tools to record, organize and coordinate knowledge and work. 
 
@@ -94,12 +97,14 @@ When choosing a tool or platform, ask these questions:
 
 Here are some of the functions that our projects have found critical, along with our experiences using different platforms.
 
-### Code and Data Repositories
+### Code and data repositories
+
 Data and code must be publicly accessible. All current OMSF projects host their code on Github. Though are alternative code repositories, they have very little uptake in scientific software development, so our projects are where our community can be found.
 
 OMSF projects make use of Zenodo for data storage. Zenodo provides a flexible system for storing and accessing virtually unlimited amounts of data, including assigning a doi to every record. Each project should create a [community on Zenodo](https://zenodo.org/communities). A Community provides tools for collecting and curating items produced as part of the same project. You can the publish datasets, talk slides, and even [software releases]( https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) to Zenodo.
 
-### Knowledge Base
+### Knowledge base
+
 Your project will generate lots of knowledge, plans and decisions, which should be written down in a place readily accessible to everyone involved in the project. Projects thrive on comprehensive communication, especially in remote organizations like OMSF. Additionally, knowledge must be stored to maintain a level of sustainability as projects scale - new members need a place to discover, and old members need a place to reference. This knowledge base should be able to store and catalogue: 
 * Meeting notes
 * Project plans
@@ -107,11 +112,12 @@ Your project will generate lots of knowledge, plans and decisions, which should 
 
 There are a number of proprietary solutions that allow for storage and organization of knowledge. OMSF projects have experience with 
 * *Google Drive:* Useful for a wide range of file types, sharing with external collaborators. Difficult to organize or search, if used as the primary knowledge base it requires a lot of work to make documents discoverable (e.g. making Tabler of Contents files)
-* Confluence: A powerful knowledge base with many built-in templates and automations. Very customizable, but requires a lot of commitment to use well.
-* Notion: A lighter-weight knowledge base platform than Confluence, with similar use cases.
+* *Confluence:* A powerful knowledge base with many built-in templates and automations. Very customizable, but requires a lot of commitment to use well.
+* *Notion:* A lighter-weight knowledge base platform than Confluence, with similar use cases.
  In addition, open source alternatives exist, ranging from wikis to full-featured knowledge base systems, but currently no OMSF project has experience with such a platform.
  
 ### Tracker
+
 Many of the responsibilities of project management described above require the team, and especially the PM, to have a comprehensive overview of the work being done. Projects thrive on comprehensive communication. While a knowledge base provides a long term, general understanding of a project, Trackers provide real-time information to members of a project team, giving context and clarity to day-to-day project tasks. A useful tracker should fit your individual projects needs, but all trackers should:
 * Manage priorities
 * Coordinate interdependent development efforts
@@ -124,6 +130,7 @@ Sometimes, a spreadsheet is not enough. There are a number of platforms that bal
 * *Zenhub:* Project management layer on top of Github, for reduced friction between development and project management. Scales to complex projects better than native Github features, but is still pushed to the limits by our larger projects.
 
 ### Communications
+
 Projects need a platform for internal communications between team members, as well as range of different channels for communicating with different stakeholers (see [Project Community](../project_community/#community-engagement/)). Remember, projects thrive on comprehensive communication. It is vital that projects not only have the ability to reach out to peers and close stakeholders, but that team members feel comfortable enough with the tools to do so. Whatever platform you choose, it should
 * Facilitate asynchronous communication
 * Keep written records of staff communication
@@ -139,16 +146,19 @@ Communication platforms are usually chosen based on cultural norms -- again, it'
 
 OMSF projects also use Gmail for private, formal correspondence, including some engagement with industry partners.
 
-## Evaluation and Metrics
+## Evaluation and metrics
+
 Simply put, metrics are measurable changes over time. More often than not, these are quantitative measurements that represent the state of a project. Metrics are almost never useful as individual points - they require a baseline and some time to determine health. Measuring Open Source Software is a hard problem, and OMSF projects have not settled on any specific set of metrics to track. We have considered
 * *Github statistics:* These primarily reflect the actions of the developer team, except in very widely used, mature projects.
 * *Package downloads:* Difficult to distinguish users from automated downloads in Continuous Integration pipelines.
 * *Citations:* Nonexistent for young projects. Difficult to normalize for mature projects, as software tools may be described in a number of publications, making it unclear which papers' citations should be included.
 
-## Publishing Scientific Papers
+## Publishing scientific papers
+
 If your software project is successful, it will lead to new, publication-worthy science. Publishing a scientific paper is a much different kind of task than software development, and requires different expertise and considerations. The following is adapted from [Open Force Field's writing process and stages](https://docs.google.com/document/d/1tvkGiP5N_T2v7iH_Y1R69V-pXJUnTS8RqEnwf_TG-wM/edit?usp=sharing)
 
-### Prepare a Manuscript
+### Prepare a manuscript
+
 Assign a *lead author* and a *lead PI*. The *lead author* is responsible for:
 * providing drafts,
 * coordinating feedback (give deadlines!)
@@ -166,13 +176,16 @@ The lead author and PI will set the timeline for feedback for each stage of the 
 * Partners will check the box associated with their name in the provided spreadsheet for each manuscript. 
 * Partners should also be informed that a failure to provide comments will be assumed to mean they approve.
 #### Resources 
+
 * [Manuscript review tracker](https://docs.google.com/spreadsheets/d/1YyIIzeM7YHPDUJCpbu8gTNHsjW9yQB1bxIPMLdmhU6E/edit?gid=1971558079#gid=1971558079)
 * [Ten simple rules for collaboratively writing a multi-authored paper](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006508)
 
-### Attribute Authorship
+### Attribute authorship
+
 We recommend using the [Contributor Role Taxonomy (CRediT)](https://credit.niso.org/) framework for attributing authorship. For each publication, prepare a chart where individuals will be able to put their or someone else’s name next to the appropriate CRediT category. (See [example](https://docs.google.com/spreadsheets/d/12UgwPGjWFXqsBm5FTW59SKUUw4PzSHvvA79aSItOog8/edit?gid=0#gid=0)) The list of contributors with short contribution descriptions should be published on the website and on Zenodo record for the given record.
 
 ### Publish!
+
 OMSF projects usually publish manuscripts to a preprint server, such as 
 * [Arxiv](https://arxiv.org/)
 * [Chemrxiv](https://chemrxiv.org/)

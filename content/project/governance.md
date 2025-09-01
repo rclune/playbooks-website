@@ -13,7 +13,8 @@ Successful project execution requires effective leadership and clarity around ro
 
 The decision process should include a shared understanding of which decisions must be made by formal governance and which are delegated to operational leadership. Bylaws and policies create the shared understanding of “how we do things” and “who has which rights and responsibilities”.
 
-## The Three Functions of Governance
+## The three functions of governance
+
 * Setting strategy
   * Who do we serve and how?
   * What vision do we adopt?
@@ -29,7 +30,7 @@ The decision process should include a shared understanding of which decisions mu
 
 The three functions of governance can be fulfilled by a single person, but in OMSF projects they are usually fulfilled by a board. The board should consist of a group of people with aligned but distinct interests operating under the agreement of the bylaws.
 
-### Consortium Governance Example: The advisory board / governing board model.
+### Consortium governance example: The advisory board / governing board model
 
 OMSF consortium-funded projects use a two-stage governance structure that reflects the differing monetary contributions of partners.
 * Three tiers of support are defined by annual contribution
@@ -37,7 +38,8 @@ OMSF consortium-funded projects use a two-stage governance structure that reflec
 * Members elect representatives to the governing board, with higher support tiers receiving greater representation
 
 #### Decision making in the advisory board / governing board model
- The governing board also provides budget and high-level operational oversight. 
+
+The governing board also provides budget and high-level operational oversight. 
 The leadership team operationalizes all decisions, converts them into roadmaps and deliverables, and provides regular reports to the boards. 
 Examples of decision-making bodies and roles at OMSF:
 * Project Advisory Board. The advisory board receives regular updates from the project and is presented with all major decisions for their input. Once the input of the advisory board has been integrated, a set of options are presented to the governing board for approval.
@@ -58,4 +60,3 @@ Examples of decision-making bodies and roles at OMSF:
   * Pros: distributes responsibility, easier to fill these roles
   * Cons: Requires very careful structuring to avoid diffusing responsibility (no one knows who is responsible for anything) instead of distributing it (everyone knows who is responsible for each part)
 * Drivers: individuals responsible for a specific product or task
-
