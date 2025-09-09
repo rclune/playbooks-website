@@ -177,7 +177,7 @@ The lead author and PI will set the timeline for feedback for each stage of the 
 * Partners should also be informed that a failure to provide comments will be assumed to mean they approve.
 #### Resources 
 
-* [Manuscript review tracker](https://docs.google.com/spreadsheets/d/1YyIIzeM7YHPDUJCpbu8gTNHsjW9yQB1bxIPMLdmhU6E/edit?gid=1971558079#gid=1971558079)
+* [Manuscript review tracker](https://docs.google.com/spreadsheets/d/12UgwPGjWFXqsBm5FTW59SKUUw4PzSHvvA79aSItOog8/edit?usp=sharing)
 * [Ten simple rules for collaboratively writing a multi-authored paper](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006508)
 
 ### Attribute authorship
