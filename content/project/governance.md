@@ -35,7 +35,7 @@ The three functions of governance can be fulfilled by a single person, but in OM
 OMSF consortium-funded projects use a two-stage governance structure that reflects the differing monetary contributions of partners.
 * Three tiers of support are defined by annual contribution
 * All supporting members get a seat at the advisory board
-* Members elect representatives to the governing board, with higher support tiers receiving greater representation
+* Advisory board members elect representatives to the governing board, with higher support tiers receiving greater representation
 
 #### Decision making in the advisory board / governing board model
 

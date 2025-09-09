@@ -5,11 +5,11 @@ weight: 3
 sidebar:
   order: 3
 ---
-Translating projects’ vision and mission is never easy, and execution paths will depend on many things, including available resources, environment, and even personalities of people involved in the execution.At OMSF, we came to rely on Project Managers to assist with the project execution. The PM takes the vision laid out by project leadership and enacts it. While it may seem that a PM does not need to be an expert in either the scientific field or in software engineering, we found that  having knowledge and skill in the area is immensely helpful. The most important skills for a PM are prioritization and delegation, but putting these skills into practice requires a deep intuition for the nature of the problem being solved. This intuition comes from domain context, as do awareness of the skills and limitations of the other members of the team. The PM must be able to hold onto the vision of the project and keep it in sight of the rest of the team, helping them resist distraction and prevent scope creep. For projects that have to manage lots of ideas and potential solutions, this strict focus is an uphill battle. The PM should also be comfortable thinking in possibilities, to make strategic decisions that consider both the present reality of the project and multiple potential futures.
+Translating projects’ vision and mission is never easy, and execution paths will depend on many things, including available resources, environment, and even personalities of people involved in the execution. At OMSF, we came to rely on Project Managers to assist with the project execution. The PM takes the vision laid out by project leadership and enacts it. While it may seem that a PM does not need to be an expert in either the scientific field or in software engineering, we found that  having knowledge and skill in the area is immensely helpful. The most important skills for a PM are prioritization and delegation, but putting these skills into practice requires a deep intuition for the nature of the problem being solved. This intuition comes from domain context, as do awareness of the skills and limitations of the other members of the team. The PM must be able to hold onto the vision of the project and keep it in sight of the rest of the team, helping them resist distraction and prevent scope creep. For projects that have to manage lots of ideas and potential solutions, this strict focus is an uphill battle. The PM should also be comfortable thinking in possibilities, to make strategic decisions that consider both the present reality of the project and multiple potential futures.
 
 ## Following the roadmap
 
-The [annual roadmap]() serves as the definitive guide to the desires of the governing body and the tactical plan for the project. Following the roadmap means delivering the approved objectives, but in practice it usually means *not* delivering non-approved features. It also means assigning a sequence, or order of completion, to the objectives on the roadmap.
+The [annual roadmap](../roadmapping/#tactics) serves as the definitive guide to the desires of the governing body and the tactical plan for the project. Following the roadmap means delivering the approved objectives, but in practice it usually means *not* delivering non-approved features. It also means assigning a sequence, or order of completion, to the objectives on the roadmap.
 
 ### Delivering subprojects
 
@@ -131,7 +131,7 @@ Sometimes, a spreadsheet is not enough. There are a number of platforms that bal
 
 ### Communications
 
-Projects need a platform for internal communications between team members, as well as range of different channels for communicating with different stakeholers (see [Project Community](../project_community/#community-engagement/)). Remember, projects thrive on comprehensive communication. It is vital that projects not only have the ability to reach out to peers and close stakeholders, but that team members feel comfortable enough with the tools to do so. Whatever platform you choose, it should
+Projects need a platform for internal communications between team members, as well as range of different channels for communicating with different stakeholders (see [Project Community](../project_community/#community-engagement/)). Remember, projects thrive on comprehensive communication. It is vital that projects not only have the ability to reach out to peers and close stakeholders, but that team members feel comfortable enough with the tools to do so. Whatever platform you choose, it should
 * Facilitate asynchronous communication
 * Keep written records of staff communication
 * Organize communication records for easier recovery
@@ -182,7 +182,7 @@ The lead author and PI will set the timeline for feedback for each stage of the 
 
 ### Attribute authorship
 
-We recommend using the [Contributor Role Taxonomy (CRediT)](https://credit.niso.org/) framework for attributing authorship. For each publication, prepare a chart where individuals will be able to put their or someone else’s name next to the appropriate CRediT category. (See [example](https://docs.google.com/spreadsheets/d/12UgwPGjWFXqsBm5FTW59SKUUw4PzSHvvA79aSItOog8/edit?gid=0#gid=0)) The list of contributors with short contribution descriptions should be published on the website and on Zenodo record for the given record.
+We recommend using the [Contributor Role Taxonomy (CRediT)](https://credit.niso.org/) framework for attributing authorship. For each publication, prepare a chart where individuals will be able to put their or someone else’s name next to the appropriate CRediT category (see [example](https://docs.google.com/spreadsheets/d/12UgwPGjWFXqsBm5FTW59SKUUw4PzSHvvA79aSItOog8/edit?gid=0#gid=0)). The list of contributors with short contribution descriptions should be published on the website and on Zenodo record for the given record.
 
 ### Publish!
 

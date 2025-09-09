@@ -47,8 +47,8 @@ OMSF employs multiple channels to foster community discussions and keep stakehol
 At Open Free Energy, for example, we define the following "circles" of stakeholders and communicate with them through distinct channels:
 | Circle | Stakeholders | Channels |
 | ------ | ------------ | -------- |
-| Inner  | Project staff, Leadership, Core developers | Zenhub, Github PRs, Slack private channels, Confluence, Weekly meetings |
-| Middle | Advisory board, OMSF staff | Github issues & discussions, Slack public channels, Open meetings, Mailing lists |
+| Inner  | Project staff, Leadership, Core developers | Zenhub, GitHub PRs, Slack private channels, Confluence, Weekly meetings |
+| Middle | Advisory board, OMSF staff | GitHub issues & discussions, Slack public channels, Open meetings, Mailing lists |
 | Outer  | Non-partner companies, Academic users, Everyone else | Website, Social media, Open Meetings, Conference presentations |
 
 In addition to these communication channels, engaging in more formal, qualitative discovery processes can help your project understand the types of individuals that make up the external communities. More often than not, there are common factors that draw external collaborators to a project. To engage these collaborators effectively, it is imperative to understanding these motivations. Standard practices, such as user surveys and stakeholder interviews, should be used to understand these motivations.
@@ -65,8 +65,8 @@ The most effective way to enforce a CoC is to establish it as the governing docu
 
 ### Resources:
 
-* OMSF CoC: https://www.notion.so/omsf/Code-of-Conduct-99f708d9717f4c09aeae069b8319bee4
-* Rosetta Commons CoC: https://rosettacommons.org/about/policies/
+* OMSF CoC: https://omsf.io/resources/conduct/
+* Rosetta Commons CoC: https://rosettacommons.org/about/code-of-conduct/
 * How to Respond to Code of Conduct Reports, by Valerie Aurora and Mary Gardiner: https://frameshiftconsulting.com/resources/code-of-conduct-book/#book
 
 ## Growth strategy
