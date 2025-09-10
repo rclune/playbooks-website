@@ -74,7 +74,7 @@ The most important consideration when hiring is not the individual skills being 
 
 ## Product management
 
-Where Project Management is concerned with advancing the state of the project as the voice of the project, adding new frameworks and products, Product Management is concerned as the voice of the product; with maintaining stability of existing software products, fixing bugs, and delivering new features and user experiences. These two processes are complementary and share some strategies, but require a different mindset. In our projects, Product Management responsibilities are mostly devolved to individual [Drivers](../governance/#consortium-governance-example-the-advisory-board--governing-board-model)
+Where Project Management is concerned with advancing the state of the project as the voice of the project, adding new frameworks and products, Product Management is concerned as the voice of the product; with maintaining stability of existing software products, fixing bugs, and delivering new features and user experiences. These two processes are complementary and share some strategies, but require a different mindset. In our projects, Product Management responsibilities are mostly devolved to individual [Drivers](../governance/#consortium-governance-example-the-advisory-board--governing-board-model).
 
 Product Management includes the following concerns:
 * *Feature development:* Adding new features to an existing software product to meet new needs of existing users or appeal to a broader user base
