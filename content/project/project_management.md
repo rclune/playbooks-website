@@ -126,7 +126,7 @@ Many of the responsibilities of project management described above require the t
 Sometimes, a spreadsheet is not enough. There are a number of platforms that balance functionality and complexity -- the more things the platform can do, the steeper the learning curve and the more friction it can introduce into the team's workflow. OMSF projects have tried
 * *Native GitHub features:* useful for small projects. Github has recently added features for coordinating work between different repositories or subprojects, but they don't scale well to the complexity of our larger projects that involve several team members working across many repos.
 * *Trello:* Useful for small teams. Limited functionality.
-* *Jira:* Useful for comprehensive management of large projects. Doesn't integrate well with Github.
+* *Jira:* Useful for comprehensive management of large projects. Doesn't integrate well with GitHub.
 * *Zenhub:* Project management layer on top of Github, for reduced friction between development and project management. Scales to complex projects better than native Github features, but is still pushed to the limits by our larger projects.
 
 ### Communications
