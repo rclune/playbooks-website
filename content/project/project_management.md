@@ -155,7 +155,7 @@ Simply put, metrics are measurable changes over time. More often than not, these
 
 ## Publishing scientific papers
 
-If your software project is successful, it will lead to new, publication-worthy science. Publishing a scientific paper is a much different kind of task than software development, and requires different expertise and considerations. The following is adapted from [Open Force Field's writing process and stages](https://docs.google.com/document/d/1tvkGiP5N_T2v7iH_Y1R69V-pXJUnTS8RqEnwf_TG-wM/edit?usp=sharing)
+If your software project is successful, it will lead to new, publication-worthy science. Publishing a scientific paper is a much different kind of task than software development, and requires different expertise and considerations. The following is adapted from [Open Force Field's writing process and stages](https://docs.google.com/document/d/1tvkGiP5N_T2v7iH_Y1R69V-pXJUnTS8RqEnwf_TG-wM/edit?usp=sharing).
 
 ### Prepare a manuscript
 
