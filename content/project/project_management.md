@@ -167,6 +167,7 @@ Assign a *lead author* and a *lead PI*. The *lead author* is responsible for:
 The *lead PI* is responsible for 
 * supporting the lead author 
 * ensuring that papers progress through stages in a timely manner. 
+
 If an author does not provide feedback when required, the *lead PI* (or their delegate) should take responsibility to give that author appropriate options, such as (a) drop off of the paper, or (b) agree to let it proceed without providing review at that stage. 
 The choice of option (b) affects later stages – for example, a collaborator who declines to provide feedback on a rough draft should not then request major restructuring at a later stage.
 
