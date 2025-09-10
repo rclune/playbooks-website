@@ -99,7 +99,7 @@ Here are some of the functions that our projects have found critical, along with
 
 ### Code and data repositories
 
-Data and code must be publicly accessible. All current OMSF projects host their code on Github. Though are alternative code repositories, they have very little uptake in scientific software development, so our projects are where our community can be found.
+Data and code must be publicly accessible. All current OMSF projects host their code on GitHub. Though are alternative code repositories, they have very little uptake in scientific software development, so our projects are where our community can be found.
 
 OMSF projects make use of Zenodo for data storage. Zenodo provides a flexible system for storing and accessing virtually unlimited amounts of data, including assigning a doi to every record. Each project should create a [community on Zenodo](https://zenodo.org/communities). A Community provides tools for collecting and curating items produced as part of the same project. You can the publish datasets, talk slides, and even [software releases]( https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) to Zenodo.
 
