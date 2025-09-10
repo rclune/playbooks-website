@@ -163,6 +163,7 @@ Assign a *lead author* and a *lead PI*. The *lead author* is responsible for:
 * providing drafts,
 * coordinating feedback (give deadlines!)
 * ensuring editing is done in a manner which does not result in irreconcilable editing clashes (e.g. multiple authors editing simultaneously in a way where they are making opposite edits simultaneously)
+
 The *lead PI* is responsible for 
 * supporting the lead author 
 * ensuring that papers progress through stages in a timely manner. 
