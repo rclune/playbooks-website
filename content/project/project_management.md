@@ -149,7 +149,7 @@ OMSF projects also use Gmail for private, formal correspondence, including some 
 ## Evaluation and metrics
 
 Simply put, metrics are measurable changes over time. More often than not, these are quantitative measurements that represent the state of a project. Metrics are almost never useful as individual points - they require a baseline and some time to determine health. Measuring Open Source Software is a hard problem, and OMSF projects have not settled on any specific set of metrics to track. We have considered
-* *Github statistics:* These primarily reflect the actions of the developer team, except in very widely used, mature projects.
+* *GitHub statistics:* These primarily reflect the actions of the developer team, except in very widely used, mature projects.
 * *Package downloads:* Difficult to distinguish users from automated downloads in Continuous Integration pipelines.
 * *Citations:* Nonexistent for young projects. Difficult to normalize for mature projects, as software tools may be described in a number of publications, making it unclear which papers' citations should be included.
 
