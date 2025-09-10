@@ -83,7 +83,7 @@ Product Management includes the following concerns:
   * Continuous integration testing to identify when a change to the code introduce bugs into existing features or when dependency updates introduce bugs
   * *Benchmarking* (See [Benchmarking Playbook](/benchmarking/))
 * *Documentation* (See [Documentation Playbook], coming soon!)
-* User support: Collect support requests in a central location and assign them to team members for response. Our projects use automation to connect an email inbox to other productivity tools, like Slack or [Github](https://github.com/dwhswenson/ticgithub). 
+* User support: Collect support requests in a central location and assign them to team members for response. Our projects use automation to connect an email inbox to other productivity tools, like Slack or [GitHub](https://github.com/omsf-eco-infra/ticgithub). 
 
 ## Project management software platforms
 
