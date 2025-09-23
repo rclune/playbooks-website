@@ -43,9 +43,38 @@ To follow the roadmap, the project manager must make some estimate of the amount
 * T-shirt sizes: Most work tasks are defined as Small, Medium, or Large, where the amount of work that these sizes map onto are completely context-dependent (as with T-shirts). If necessary, work items can also be estimated as X-Small or X-Large (as with T-shirts).
 * Story points: An arbitrary unit of developer time used to measure how complex a task is. We usually approximate one story point as 30 minutes of developer effort, but it is important not to overestimate the precision of story points. Assigning powers of 2 or Fibbonacci numbers can give a reasonable approximation of the precision of story points.
 
+## Defining and building a developer team
+
+Developing molecular software requires expert skill in both science and software engineering, and recruiting these double-experts is a fundamental challenge in our field, particularly because they can often command high wages in industry. Developers with these skills are usually graduates of PhD programs in computational chemistry or physics. The archetypal molecular sciences software developer is a recent PhD who found themselves more interested in writing production-quality code than in publishing in Nature. In our experience, it is much less common to find graduates of Computer Science programs who have learned molecular sciences outside the classroom. 
+
+In scientific software development, as in other knowledge work, virtually all management boils down to Human Resource Management. The success of your project depends entirely on the performance of your team. The skills required to do this work come mostly from PhD-level training, so they necessarily come along with independence, creativity, and persistence. Scientific developers need to be given agency and respect to do their best work, and these depend on factors that have traditionally been relegated to HR. The conventional HR functions of defining and filling positions, setting fair compensation and benefits, promoting "work-life balance," and resolving disputes (especially with managers) are essential to the performance of the team. Get these things right, and your team can't help but succeed. In short, if you take care of your people, then your people will take care of the work.
+
+### Roles and responsibilities
+
+OMSF projects are typically built by small teams of experts. Each person on the team may have to "wear multiple hats," performing a mix of scientific and engineering tasks. We use two distinct job titles and descriptions ("Software Scientist" and "Research Software Engineer") to help define responsibilities and identify candidates, but in reality, each individual role can be thought of on a sliding scale between Science and Engineering. The exact position of that slider may be set by the particular skills and interests of the person in the role, but it may also shift over time, or even day-to-day, based on the work that needs to be done in the project. 
+
+The basic job descriptions for these two roles can be summarized:
+* *Research Software Engineer:* Skilled software engineers who understand the needs of the scientific community, RSEs create new code to solve scientific problems. A burgeoning community of RSEs in Europe are defining the position as a distinct career path, and the US is beginning to catch up.
+* *Software Scientist:* The Software Scientist expands the capabilities of existing software, through either experimentation or method development.
+
+OMSF's compensation policy defines a single category of developer ("RSE") at three levels of seniority. Typical qualifications and responsibilities are as follows:
+* *RSE:* PhD, Master's +3, or Bachelor's +5. Works under supervision, interacting primarily with immediate team members and supervisor.
+* *Senior RSE:* PhD +3 or Master's +6. Works independently, mentors team members, and interacts with the broader community.
+* *Technical Lead:* PhD +5 or Master's +8: Takes responsibility across multiple dimensions of the project, supervises team members, interacts directly with project governance, represents the project in public.
+
+Following the division of RSEs into Software Engineers and Software Scientists, some OMSF projects have two Technical Leads:
+* *Science Lead:* Supervises Software Scientists. Responsible for designing and conducting any relevant experiments, ensuring scientific accuracy and applicability of code, publishing any scientific papers that come out of the project
+* *Infrastructure Lead:* Supervises Research Software Engineers. Responsible for designing software architecture, ensuring performance and stability of the code base, and leading testing and documentation efforts.
+
+### Hiring strategy
+
+When defining the roles that will make up your project team, it is important to write realistic job descriptions that match real candidates. Accurate, realistic, detailed job description will allow candidates to self-select roles that will best match their own skills and interests. Job descriptions that are too ambitious may select for candidates with over-inflated views of their own abilities. There are no superhero software developers, or if there are, a non-profit budget can't afford them. Selecting a candidate who is both an accomplished scientist and a skilled software engineer likely means choosing someone with poor teamwork or other important weaknesses.
+
+The most important consideration when hiring is not the individual skills being added to the team, but the overall impact on team health. A team member's ability to come to agreement on what problems need to be solved is far more important than their ability to solve the hardest problems. Just as importantly, a highly productive individual contributor who destroys the harmony of the team with a rude or belittling attitude is a net negative to the team's productivity.
+
 ## Product management
 
-Where Project Management is concerned with advancing the state of the project as the voice of the project, adding new frameworks and products, Product Management is concerned as the voice of the product; with maintaining stability of existing software products, fixing bugs, and delivering new features and user experiences. These two processes are complementary and share some strategies, but require a different mindset. In our projects, Product Management responsibilities are mostly devolved to individual [Drivers](../governance/#consortium-governance-example-the-advisory-board--governing-board-model)
+Where Project Management is concerned with advancing the state of the project as the voice of the project, adding new frameworks and products, Product Management is concerned as the voice of the product; with maintaining stability of existing software products, fixing bugs, and delivering new features and user experiences. These two processes are complementary and share some strategies, but require a different mindset. In our projects, Product Management responsibilities are mostly devolved to individual [Drivers](../governance/#consortium-governance-example-the-advisory-board--governing-board-model).
 
 Product Management includes the following concerns:
 * *Feature development:* Adding new features to an existing software product to meet new needs of existing users or appeal to a broader user base
@@ -54,7 +83,7 @@ Product Management includes the following concerns:
   * Continuous integration testing to identify when a change to the code introduce bugs into existing features or when dependency updates introduce bugs
   * *Benchmarking* (See [Benchmarking Playbook](/benchmarking/))
 * *Documentation* (See [Documentation Playbook], coming soon!)
-* User support: Collect support requests in a central location and assign them to team members for response. Our projects use automation to connect an email inbox to other productivity tools, like Slack or [Github](https://github.com/dwhswenson/ticgithub). 
+* User support: Collect support requests in a central location and assign them to team members for response. Our projects use automation to connect an email inbox to other productivity tools, like Slack or [GitHub](https://github.com/omsf-eco-infra/ticgithub). 
 
 ## Project management software platforms
 
@@ -70,9 +99,9 @@ Here are some of the functions that our projects have found critical, along with
 
 ### Code and data repositories
 
-Data and code must be publicly accessible. All current OMSF projects host their code on Github. Though are alternative code repositories, they have very little uptake in scientific software development, so our projects are where our community can be found.
+Data and code must be publicly accessible. All current OMSF projects host their code on GitHub. Though are alternative code repositories, they have very little uptake in scientific software development, so our projects are where our community can be found.
 
-OMSF projects make use of Zenodo for data storage. Zenodo provides a flexible system for storing and accessing virtually unlimited amounts of data, including assigning a doi to every record. Each project should create a [community on Zenodo](https://zenodo.org/communities). A Community provides tools for collecting and curating items produced as part of the same project. You can the publish datasets, talk slides, and even [software releases]( https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) to Zenodo.
+OMSF projects make use of Zenodo for data storage. Zenodo provides a flexible system for storing and accessing virtually unlimited amounts of data, including assigning a DOI to every record. Each project should create a [community on Zenodo](https://zenodo.org/communities). A Community provides tools for collecting and curating items produced as part of the same project. You can the publish datasets, talk slides, and even [software releases]( https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) to Zenodo.
 
 ### Knowledge base
 
@@ -95,10 +124,10 @@ Many of the responsibilities of project management described above require the t
 * Give PM insight into the work to provide support to the team
 
 Sometimes, a spreadsheet is not enough. There are a number of platforms that balance functionality and complexity -- the more things the platform can do, the steeper the learning curve and the more friction it can introduce into the team's workflow. OMSF projects have tried
-* *Native Github features:* useful for small projects. Github has recently added features for coordinating work between different repositories or subprojects, but they don't scale well to the complexity of our larger projects that involve several team members working across many repos.
+* *Native GitHub features:* useful for small projects. Github has recently added features for coordinating work between different repositories or subprojects, but they don't scale well to the complexity of our larger projects that involve several team members working across many repos.
 * *Trello:* Useful for small teams. Limited functionality.
-* *Jira:* Useful for comprehensive management of large projects. Doesn't integrate well with Github.
-* *Zenhub:* Project management layer on top of Github, for reduced friction between development and project management. Scales to complex projects better than native Github features, but is still pushed to the limits by our larger projects.
+* *Jira:* Useful for comprehensive management of large projects. Doesn't integrate well with GitHub.
+* *Zenhub:* Project management layer on top of GitHub, for reduced friction between development and project management. Scales to complex projects better than native GitHub features, but is still pushed to the limits by our larger projects.
 
 ### Communications
 
@@ -120,13 +149,13 @@ OMSF projects also use Gmail for private, formal correspondence, including some 
 ## Evaluation and metrics
 
 Simply put, metrics are measurable changes over time. More often than not, these are quantitative measurements that represent the state of a project. Metrics are almost never useful as individual points - they require a baseline and some time to determine health. Measuring Open Source Software is a hard problem, and OMSF projects have not settled on any specific set of metrics to track. We have considered
-* *Github statistics:* These primarily reflect the actions of the developer team, except in very widely used, mature projects.
+* *GitHub statistics:* These primarily reflect the actions of the developer team, except in very widely used, mature projects.
 * *Package downloads:* Difficult to distinguish users from automated downloads in Continuous Integration pipelines.
 * *Citations:* Nonexistent for young projects. Difficult to normalize for mature projects, as software tools may be described in a number of publications, making it unclear which papers' citations should be included.
 
 ## Publishing scientific papers
 
-If your software project is successful, it will lead to new, publication-worthy science. Publishing a scientific paper is a much different kind of task than software development, and requires different expertise and considerations. The following is adapted from [Open Force Field's writing process and stages](https://docs.google.com/document/d/1tvkGiP5N_T2v7iH_Y1R69V-pXJUnTS8RqEnwf_TG-wM/edit?usp=sharing)
+If your software project is successful, it will lead to new, publication-worthy science. Publishing a scientific paper is a much different kind of task than software development, and requires different expertise and considerations. The following is adapted from [Open Force Field's writing process and stages](https://docs.google.com/document/d/1tvkGiP5N_T2v7iH_Y1R69V-pXJUnTS8RqEnwf_TG-wM/edit?usp=sharing).
 
 ### Prepare a manuscript
 
@@ -134,9 +163,11 @@ Assign a *lead author* and a *lead PI*. The *lead author* is responsible for:
 * providing drafts,
 * coordinating feedback (give deadlines!)
 * ensuring editing is done in a manner which does not result in irreconcilable editing clashes (e.g. multiple authors editing simultaneously in a way where they are making opposite edits simultaneously)
+
 The *lead PI* is responsible for 
 * supporting the lead author 
 * ensuring that papers progress through stages in a timely manner. 
+
 If an author does not provide feedback when required, the *lead PI* (or their delegate) should take responsibility to give that author appropriate options, such as (a) drop off of the paper, or (b) agree to let it proceed without providing review at that stage. 
 The choice of option (b) affects later stages – for example, a collaborator who declines to provide feedback on a rough draft should not then request major restructuring at a later stage.
 
