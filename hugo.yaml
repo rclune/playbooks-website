@@ -34,6 +34,15 @@ menu:
         teaser: >
           Discover our recommendations for developing benchmarks.
 
+    - name: Documentation
+      pageRef: /documentation
+      weight: 4
+      params:
+        type: playbook
+        teaser: >
+          Explore our resources for creating amazing documentation
+          for both your developers and users.
+
     #- name: Projects
       #pageRef: /projects
       #weight: 3

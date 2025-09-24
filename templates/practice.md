@@ -7,6 +7,8 @@ what: >
 why: >
   <STRING, REQUIRED>
 when: <STRING, REQUIRED>
+where: <STRING, OPTIONAL>
+importance: <STRING, OPTIONAL>
 challenges:
   - <OPTIONAL>
   - <LIST OF MARKDOWN STRINGS>
