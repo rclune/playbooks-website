@@ -60,10 +60,18 @@ footer .hextra-custom-footer {
 
 footer .column-1 {
     color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     a {
         color: var(--text-color);
         text-decoration: underline;
     }
+}
+
+footer .column-1 img {
+    align-self: flex-start;
+    margin-bottom: 1em;
 }
 
 footer .column-2 {
@@ -74,6 +82,30 @@ footer .column-2 {
     align-items: flex-end;
     justify-content: space-between;
     height: 100%;
+    max-width: 25em;
+}
+
+footer .nsf {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+footer .nsf-logo {
+    display: flex;
+    flex-shrink: 0;
+}
+
+footer .nsf-logo img {
+    height: 4em;
+    width: auto;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+footer .nsf-ack {
+    text-align: right;
 }
 
 @media screen and (max-width: 768px) {
@@ -87,11 +119,12 @@ footer .column-2 {
         text-align: left;
         align-items: flex-start;
     }
-}
-
-
-footer .hextra {
-    margin-top: 1em;
+    footer .nsf {
+        flex-direction: row;
+    }
+    footer .nsf-ack {
+        text-align: left;
+    }
 }
 
 body {
