@@ -14,15 +14,15 @@ themes:
   - Live the contributor experience
 ---
 
-There are several differences in how GitHub (and other forges) treat pull
-requests that come from forks vs. pull requests that come from branches in the
-main repository. These differences are due to security concerns, and you
+There are several differences in how GitHub (and other forges) treat [pull
+requests that come from forks](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) vs. [pull requests that come from branches in the
+main repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request). These differences are due to security concerns, and you
 certainly want them to be in place for pull requests from potentially malicious
 sources.
 
 However, these can also cause problems for contributions from well-meaning
-external contributors. For example, GitHub Actions workflows will run within a
-fork (though not successfully if secrets are required.) If core devs are not
+external contributors. For example, [GitHub Actions](https://github.com/features/actions) workflows will run within a
+fork (though not successfully if [secrets](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions) are required.) If core devs are not
 working from forks, they may not be aware that this is an annoyance to external
 contributors. By working from forks, it will annoy the core devs as well, and
 they'll add the necessary if-statement to prevent the workflow from running in

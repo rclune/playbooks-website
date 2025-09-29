@@ -202,7 +202,7 @@ nav .playbook-menu {
 }
 
 li.menu-has-children a.playbook-menu:after {
-    content: "\0023F7";
+    content: "\0025be";
     padding-left: 15px;
     color: var(--agathe-dark);
 }
