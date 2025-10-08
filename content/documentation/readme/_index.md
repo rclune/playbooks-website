@@ -16,7 +16,7 @@ All extraneous information outside of this needs to go into the external documen
 It’s good practice to have a new user go through your README and test everything before your repo is made public.
 > *Writing Tip:* If you need volunteers, offer to exchange your time for theirs. They might need someone to test their own code, review something they’ve written, etc.
 
-This section discusses:
+Highlights of this section: 
 * What should go into a README vs. the external documentation
 * Tips and suggestions for creating a README that is useful for people just discovering the project and long-time users
 

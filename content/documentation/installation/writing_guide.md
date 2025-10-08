@@ -1,6 +1,6 @@
 ---
 layout: section
-title: Writing and Installation Guide
+title: Writing an Installation Guide
 weight: 3
 ---
 There is a Markdown template for the installation guide in the companion GitHub repository. <!-- LINK GITHUB REPO -->

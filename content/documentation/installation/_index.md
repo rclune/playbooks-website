@@ -8,7 +8,7 @@ A clear installation guide helps users and contributors get started with a proje
 
 You may have several guides for different computer architectures, package managers, etc. or just one. If your project has many dependencies it is highly recommended to also provide an image (Docker, Apptainer, etc.) to allow users to avoid spending time dealing with any versioning issues. If your project already has a reliable image, it is still good to include separate installation instructions or a recipe for the image as contributors may need to change the project's dependencies. 
 
-This section discusses: 
+Highlights of this section:  
 - How to write instructions for different types of installation procedures
 - How to ensure that installation instructions can be reliably followed
 - Important information to include for your users and contributors to avoid dealing with dependency issues
