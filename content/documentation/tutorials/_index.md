@@ -1,7 +1,7 @@
 ---
 title: Tutorials
 layout: topic
-weight: 5
+weight: 4
 ---
 
 Tutorials are essential for helping new users feel confident that they can successfully use your tool. A good tutorial demonstrates *how* to use the tool by guiding users through hands-on examples. Because users may have different operating systems and varying levels of experience, it’s especially important that tutorials always work as intended. Encountering errors while following a tutorial can be discouraging and may cause users to give up or seek alternative tools.

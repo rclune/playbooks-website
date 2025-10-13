@@ -1,7 +1,7 @@
 ---
 layout: section
 title: Images
-weight: 3
+weight: 4
 ---
 
 Images can help clarify your tutorial, make it easier to skim for those using it as a reference, and break up the text to make it feel less tedious. 
