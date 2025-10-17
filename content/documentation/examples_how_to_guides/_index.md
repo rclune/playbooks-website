@@ -10,7 +10,7 @@ Your examples might highly specific, such as ['How to design a C4-symmetric olig
 
 In this guide, we use the term “example” to refer to documentation that users can actually run, while a “how-to guide” demonstrates a feature using placeholder inputs or dummy parameters. How much explanation and structure to surround your example/how-to guide with will depend on your intended audience and the features you want to showcase. 
 
-Highlights of this section: 
+This section covers: 
 - What to write your Examples/How-To Guides about
 - How to make Examples/How-To Guides easy to follow
 - How How-To Guides and Examples differ from tutorials
