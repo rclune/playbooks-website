@@ -3,14 +3,14 @@ layout: practice
 weight: 1
 title: README fundamentals
 what: >
-  Brief description of the scope of the tool: what your tool can and/or can’t do and some details about how it works. The audience is a **new user**, think of it as a sales pitch to members of your field.
+  The README is your project's welcome mat. It should clearly explain – for both **new and returning users** – what your tool does, how to install and use it, and where to go for more information or support. 
 why: >
-  This tells your user why they might be interested in your tool and can help them understand if it will help solve their research problem. 
+  The README is often the first document people read when discovering your tool. A clear, well-organized README helps users quickly understand its purpose and encourages them to engage with and use your project. Without one, users are far less likely to explore further.
 when: >
-    **Finalizing for Release + Publication**
+    **Early Development**
 
     
-    While many of the ideas that need to be included in this piece of documentation were present throughout the development process (e.g. why the tool is useful), this document does not need to be polished until you are ready to publish your tool. 
+    Your README should be created early in development and updated regularly as the project evolves. Developers will rely on it throughout the development process for setup instructions, usage notes, and context about the tool. 
 where: Root directory of the repo
 importance: High
 see_also:
