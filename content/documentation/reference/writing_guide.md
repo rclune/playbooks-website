@@ -4,7 +4,7 @@ title: Writing Reference Documentation
 weight: 2
 ---
 
-This section does not cover the technical details of setting up automatic reference documentation. SFor guidance on that process, see the companion GitHub repository. <!-- TO DO: link documentation repo --> Instead, this section focuses on the content and formatting of the text you’ll provide to users. 
+This section does not cover the technical details of setting up automatic reference documentation. For guidance on that process, see the companion GitHub repository. <!-- TO DO: link documentation repo --> Instead, this section focuses on the content and formatting of the text you’ll provide to users. 
 
 ## API Documentation
 
