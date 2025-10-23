@@ -10,6 +10,7 @@ You can think of this section in two ways:
 >*Writing Tips:* If you’re having trouble deciding what to use here: 
 > - What have you been doing to test that your code is working? This might be a good place to start. 
 > - Even if it doesn’t show off the capabilities of your tool, what is the fastest thing a user can run and still get an output?
+> - What is an example requires the fewest input requirements? This will make it easier to write and maintain. 
 
 You can have multiple usage examples, but if your README starts to feel long, consider putting all but one or two of them somewhere in the external documentation instead. 
 
