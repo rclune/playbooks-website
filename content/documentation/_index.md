@@ -21,7 +21,7 @@ There is a companion GitHub repository for this Playbook! <!--TODO LINK THE REPO
 - Information for how to host your external documentation on Read the Docs or GitHub Pages.
 
 ## More to Explore!
-Are you a developer? Make sure to also check out the [Developer’s Playbook](https://playbooks.omsf.io/developer)!
+Are you a developer? Make sure to also check out the [Developer Playbook](https://playbooks.omsf.io/developer)!
 
 Leading a software project and want to make it easier for external contributors to, well, contribute? See the [Contributions Playbook](https://playbooks.omsf.io/contributions).
 
