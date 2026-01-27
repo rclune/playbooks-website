@@ -20,4 +20,4 @@ Highlights of this section:
 - How understanding your intended audience shapes content and tone
 - How to ensure your tutorial is accessible to users with vision impairments
 
-Remember that a Markdown template for an Installation Guide is available in the companion template repository! <!-- TODO: link template repository -->
+Remember that [tutorial Markdown templates](https://github.com/omsf/OMSF_docs_template/tree/main/docs/doc_templates/tutorial_templates) are available in the companion repository! 

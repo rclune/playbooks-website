@@ -13,7 +13,7 @@ options:
       - Explains abstract concepts 
   - name: Jargon
     advantages: 
-      - Any required jargon is explained concisely and even added to a glossary at the end of the tutorial
+      - Any required jargon is explained concisely and added to a glossary at the end of the tutorial
       - Any unnecessary jargon is removed
     disadvantages:
       - Tool-specific jargon is used without explanation

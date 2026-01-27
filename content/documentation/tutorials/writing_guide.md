@@ -20,7 +20,7 @@ While clear explanations are essential, tutorials should stay focused and concis
 - Link to existing external documentation if it already explains the step, there is no need to rewrite a piece of documentation if it already exists.
 This approach lets users dive deeper when they want more context while allowing others to continue through the tutorial smoothly.
 
-Remember that tutorials are meant to demonstrate the “how,” not the “why.” Avoid long theoretical or conceptual discussions, these can go in dedicated documentation pages if necessary. Tutorials should prioritize hands-on learning and clear, actionable steps.
+Remember that tutorials are meant to demonstrate the “how,” not the “why.” Avoid long theoretical or conceptual discussions, these can go in dedicated documentation pages if necessary. **Tutorials should prioritize hands-on learning and clear, actionable steps.**
 
 ## Choosing a Tutorial Topic
 ### Basic Use Case Tutorial
@@ -43,8 +43,8 @@ Once you’ve written your tutorial, especially when you think it’s finished, 
 Testing your tutorial this way helps you catch missing steps, unclear instructions, or differences in user environments that you might not notice on your own. A fresh perspective from someone similar to your target audience often reveals gaps that the author naturally overlooks.
 
 # Expanded Template
-The rest of the sections are titled to match what you will find in the templates in the companion GitHub repository. 
-You will actually find two templates in the repository, one is a Python notebook and one is a Markdown template. 
+The rest of the sections are titled to match what you will find in the [templates in the companion GitHub repository](https://github.com/omsf/OMSF_docs_template/tree/main/docs/doc_templates/tutorial_templates). 
+You will actually find two templates in the repository, one is a [Python notebook](https://github.com/omsf/OMSF_docs_template/blob/main/docs/doc_templates/tutorial_templates/tutorial_template.ipynb) and one is a [Markdown template](https://github.com/omsf/OMSF_docs_template/blob/main/docs/doc_templates/tutorial_templates/tutorial_template.md). 
 The Python notebook is great for tutorials where users will largely be using a tool's API while the Markdown template is more versatile. 
 
 ## Title
@@ -54,7 +54,7 @@ The title should give users a good idea of what they will learn and/or create by
 >    - Using AI tools can also help turn a concept into a descriptive title. 
 
 ## Table of Contents
-(Optional) A table of contents is a nice way for your users to see what’s in the tutorial and allows them to go to specific sections if they are using the tutorial as a reference for specific functionalities showcased. 
+(Optional) A table of contents is a nice way for your users to see what’s in the tutorial and allows them to go to specific sections, if they are using the tutorial as a reference for specific functionalities showcased. 
 
 ## Introduction
 This section will give an overview of what will be covered in the tutorial. This includes learning objectives and any outputs that the user will have created by the end of the tutorial. Background on the system being used in the tutorial or some tool-specific jargon definitions can go here as well. 
@@ -62,7 +62,7 @@ This section will give an overview of what will be covered in the tutorial. This
 > - Expand on your title: think about how you would convince a user that this tutorial is worth their time. For example, will it step them through how to create a specific output they need for their project? 
 
 ## Input and Output Files
-If your tutorial does not need any external input files or generates any output files, skip this section.
+If your tutorial does not need any external input files and generates no output files, skip this section.
 
 **Why give output files?** If the tutorial does not work for some reason or the user wants to check to make sure they followed the instructions correctly, they can download the example output files to see the expected behavior of your tool. 
 

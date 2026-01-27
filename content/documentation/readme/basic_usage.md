@@ -20,4 +20,4 @@ The usage examples should include
 - Any outputfiles and where to find examples *(This allows the user to compare their outputs to make sure they have the tool installed correctly.)*
 - A list of every step the user needs to follow to run the example successfully
 
->*Writing Tip:* Make sure to use code blocks or in-line code when applicable! <!-- TODO: link to Josh's myst-md-demo.md when available.-->
+>*Writing Tip:* Make sure to use code blocks or in-line code when applicable! To see how to do this in markdown, look at [`myst-md-demo`](https://github.com/omsf/OMSF_docs_template/blob/main/docs/myst-md-demo.md) in the companion repository. 

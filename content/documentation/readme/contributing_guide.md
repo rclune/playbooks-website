@@ -3,7 +3,7 @@ layout: section
 title: Contributor's Guides
 weight: 7
 ---
-If you want community members to contribute PR's, close issues, and help build up the documentation it is important to include contributor's guides. This section in your README may just point to a longer guide in the external documentation if you have a lot to say <!-- TODO link to contributors guide -->
+If you want community members to contribute PR's, close issues, and help build up the documentation it is important to include contributor's guides. This section in your README may just point to a longer guide in the external documentation if you have a lot to say.
 
 Here's a few pieces of information you may want to include in your README:
 - Who can contribute to the code? 
