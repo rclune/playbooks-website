@@ -1,12 +1,11 @@
-
-languageCode: 'en-us'
-title: 'OMSF Playbooks'
-theme: 'hextra'
+languageCode: "en-us"
+title: "OMSF Playbooks"
+theme: "hextra"
 
 #module:
-  #imports:
-    #- path: "github.com/imfing/hextra"
-      #disable: false
+#imports:
+#- path: "github.com/imfing/hextra"
+#disable: false
 
 menu:
   main:
@@ -42,7 +41,6 @@ menu:
         teaser: >
           Discover our recommendations for project management.
 
-
     - name: Documentation
       pageRef: /documentation
       weight: 5
@@ -52,14 +50,6 @@ menu:
           Explore our resources for creating amazing documentation
           for both your developers and users.
 
-    #- name: Projects
-      #pageRef: /projects
-      #weight: 3
-      #params:
-        #type: playbook
-        #teaser: >
-          #Discover our recommendations for project management.
-          
     - name: Search
       weight: 100
       params:
@@ -85,4 +75,3 @@ params:
 
     flexsearch:
       index: content
-
