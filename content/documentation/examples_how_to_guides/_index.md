@@ -15,5 +15,5 @@ This section covers:
 - How to make Examples/How-To Guides easy to follow
 - How How-To Guides and Examples differ from tutorials
 
-There are no templates for examples or How-To Guides in the companion GitHub repository, since their structure can vary widely. If you want to write a more structured guide, you can start with the tutorial template. On the other hand, an example might be best presented as a runnable script rather than a Markdown document.
+There are no templates for examples or How-To Guides in the [companion GitHub repository](https://github.com/omsf/OMSF_docs_template/tree/main/docs), since their structure can vary widely. If you want to write a more structured guide, you can start with the tutorial template. On the other hand, an example might be best presented as a runnable script rather than a Markdown document.
 

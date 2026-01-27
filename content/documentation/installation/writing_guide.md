@@ -3,7 +3,7 @@ layout: section
 title: Writing an Installation Guide
 weight: 3
 ---
-There is a Markdown template for the installation guide in the companion GitHub repository. <!-- LINK GITHUB REPO -->
+There is a [Markdown template for the installation guide](https://github.com/omsf/OMSF_docs_template/blob/main/docs/doc_templates/installation_guide_template.md) in the companion GitHub repository.
 Here are some notes to help guide the creation of this guide: 
 
 ## Prerequisites

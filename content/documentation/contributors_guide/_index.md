@@ -20,3 +20,5 @@ This section covers:
 - What to include in a Contributing Guide
 - Examples of excellent Contributing Guides you can use as models
 - How to decide how much control to maintain over your project
+
+A [Markdown template for an CONTRIBUTING guide](https://github.com/omsf/OMSF_docs_template/blob/main/docs/doc_templates/CONTRIBUTING_template.md) is available in the companion template repository.

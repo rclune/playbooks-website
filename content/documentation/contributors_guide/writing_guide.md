@@ -68,7 +68,7 @@ Provide instructions for how to build the documentation here. This may include n
 
 You should also describe the structure of your documentation, so contributors know whether to append content to an existing section or create a new one.
 
-If your documentation is automatically generated from code (e.g., using docstrings or autodoc extensions), explain this here so contributors understand when code changes will also affect documentation.
+If your documentation is automatically generated from code (e.g., using docstrings or autodoc extensions), explain this here so contributors understand when code changes will also affect any external documentation.
 
 ## Code of Conduct
 The depth of this section will depend on the size and scope of your community.

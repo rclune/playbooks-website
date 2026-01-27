@@ -13,7 +13,7 @@ Highlights of this section:
 - How to ensure that installation instructions can be reliably followed
 - Important information to include for your users and contributors to avoid dealing with dependency issues
 
-Remember that a Markdown template for an Installation Guide is available in the companion template repository! <!-- TODO: link template repository -->
+A [Markdown template for an Installation Guide](https://github.com/omsf/OMSF_docs_template/blob/main/docs/doc_templates/installation_guide_template.md) is available in the companion template repository.
 
 
 

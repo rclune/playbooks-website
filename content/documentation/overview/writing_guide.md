@@ -4,7 +4,7 @@ title: Writing an Overview
 weight: 2
 ---
 
-Included here are the questions that you will also find in the overview.md template in the companion repo for this playbook. Here, we've expanded on these questions to give you more to explore when you're thinking about what to include in your overview. Not every question will be 
+Included here are the questions that you will also find in the [overview.md template in the companion repo](https://github.com/omsf/OMSF_docs_template/blob/main/docs/doc_templates/overview_template.md) for this playbook. Here, we've expanded on these questions to give you more to explore when you're thinking about what to include in your overview. Not every question will be 
 relevant for your project, and there maybe other information you would like to include in your overview that is not mentioned here. 
 
 >*Writing Tip:* If you get stuck, try describing your project to a friend/colleague who is a fairly good representation of a user of your tool. 
@@ -28,8 +28,7 @@ This can be taken from your README.
 
 ## What knowledge are you assuming the typical user knows? 
 - Are you assuming they already have experience with a related tool/application/project? 
-    - You don't necessarily need to explain these topics, but linking to external resources could be helpful
-    for users who have an unexpected background.
+    - You don't necessarily need to explain these topics, but linking to external resources could be helpful.
 - Are there publications related to this tool?  
 
 ## Where to start? 

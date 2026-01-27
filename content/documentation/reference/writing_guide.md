@@ -4,11 +4,11 @@ title: Writing Reference Documentation
 weight: 2
 ---
 
-This section does not cover the technical details of setting up automatic reference documentation. For guidance on that process, see the companion GitHub repository. <!-- TO DO: link documentation repo --> Instead, this section focuses on the content and formatting of the text you’ll provide to users. 
+This section does not cover the technical details of setting up automatic reference documentation. For guidance on that process, see the [companion GitHub repository](https://github.com/omsf/OMSF_docs_template/tree/main/docs#how-sphinxs-autodoc-works). Instead, this section focuses on the content and formatting of the text you’ll provide to users. 
 
 ## API Documentation
 
-As mentioned earlier, reference documentation based on your API can be generated automatically once the required infrastructure is set up. Most of this configuration is already prepared in the companion repository. <!-- TODO: link repo --> However, the generation of automatic API documentation by tools like Sphinx only works effectively if you write consistent and well-formatted docstrings throughout your codebase
+As mentioned earlier, reference documentation based on your API can be generated automatically once the required infrastructure is set up. Most of this configuration is already prepared in the [companion repository](https://github.com/omsf/OMSF_docs_template). However, the generation of automatic API documentation by tools like Sphinx only works effectively if you write consistent and well-formatted docstrings throughout your codebase.
 
 ### What to put in a docstring
 
@@ -118,7 +118,7 @@ Usage examples
 ```
 2. **Google and NumPy formats**
 
-Sphinx also supports using Google and NumPy docstring formats via its Napoleon extension. This extension is already included in the companion repository. <!-- TODO: link repo --> You can learn more in the [Sphinx Napoleon documentation](https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html).
+Sphinx also supports using Google and NumPy docstring formats via its [Napoleon extension](https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html). This extension is already included in the [companion repository](https://github.com/omsf/OMSF_docs_template). You can learn more in the [Sphinx Napoleon documentation](https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html).
 
 Rather than reproducing those examples here, we recommend consulting the following authoritative guides:
 - **Google**: 

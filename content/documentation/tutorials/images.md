@@ -31,6 +31,6 @@ Using arrows or text can also help direct the reader's attention.
 
 ## Accessibility
 Many people experience varying levels of colorblindness that can make it difficult to interpret images. 
-Pilestone has a [Color Vision Simulator](https://pilestone.com/pages/color-blindness-simulator) that allows you to simulate how your images will look like to people with various types of colorblindness. 
+Pilestone has a [Color Vision Simulator](https://pilestone.com/pages/color-blindness-simulator) that allows you to simulate how your images will look like to people with various types of colorblindness. If you can, it's good practice to feed any images you are going to include in a tutorial or a publication into tools like this to ensure they can be interpreted by as many people as possible.
 
 We also strongly recommend the use of alt-text and descriptive captions. While they are not a replacement for the actual image, they can still impart useful information if the image cannot be viewed. 

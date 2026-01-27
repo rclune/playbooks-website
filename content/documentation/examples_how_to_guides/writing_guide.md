@@ -20,7 +20,7 @@ Finally, consider your intended audience. If your tool is highly specialized and
 
 ## What Should I Use as an Example or Show in a How-To Guide? 
 - Integration tests are often good examples because they test specific functionality that you likely want your users to know about.
-- As users explore your tool, they may expose gaps in your documentation, use these opportunities to create examples.
+- As users explore your tool, they may expose gaps in your documentation via questions and issues, use these opportunities to create examples.
 - Any feature in your reference documentation that lacks an example or tutorial should have one added.
 
 Once your tool has a sizable user base, you can also solicit examples from users or encourage them to contribute directly to the repository.
