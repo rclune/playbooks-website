@@ -10,12 +10,39 @@
       <h2>{{ .Title }}</h2>
       <section class="frontmatter">
         <div class="frontmatter-section required">
-          <div class="label">What</div><div class="values">{{ .Params.what }}</div>
-          <div class="label">Why</div><div class="values">{{ .Params.why }}</div>
-          <div class="label">When</div><div class="values">{{ .Params.when }}</div>
+          <div class="label">What</div>
+          <div class="values">
+            {{ .Params.what | markdownify}}
+          </div>
+          <div class="label">Why</div>
+          <div class="values">
+            {{ .Params.why | markdownify}}
+          </div>
+          <div class="label">When</div>
+          <div class="values">
+            {{ .Params.when | markdownify}}
+          </div>
         </div>
 
-        {{ if .Params.challenges }}
+      {{ if .Params.where }}
+        <div class="frontmatter-section">
+        <div class="label">Where</div>
+        <div class="values">
+          {{ .Params.where}}
+        </div>
+        </div>
+      {{ end }}
+
+      {{ if .Params.importance }}
+        <div class="frontmatter-section">
+        <div class="label">Importance</div>
+        <div class="values">
+          {{ .Params.importance}}
+        </div>
+        </div>
+      {{ end }}
+
+      {{ if .Params.challenges }}
         <div class="frontmatter-section">
         <div class="label">Challenges</div>
         <div class="values">
